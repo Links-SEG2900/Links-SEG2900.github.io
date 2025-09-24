@@ -1,2 +1,3 @@
 # SEG-Repository
-Just a test
+Our project 
+
