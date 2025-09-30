@@ -3,10 +3,13 @@ Our project
 
 Team Name:
 
-Members and Student ID's:
 
-James Rousseau, 300416621
+Team members:
+
+-Inès Bouchama, n° étudiant= 300466776
+-James Rousseau, student number: 300416621
 
 
 Project Name:
 
+Project Description:
