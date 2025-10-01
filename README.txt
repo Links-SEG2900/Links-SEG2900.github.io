@@ -10,7 +10,7 @@ Team members:
 -James Rousseau, student number: 300416621
 -Azer Adam, student number: 300476224
 -Elizabeth Odebowale, student number:300475924
-
+- Laurien Michel Muhire , student number : 300337504
 
 Project Name:
 
