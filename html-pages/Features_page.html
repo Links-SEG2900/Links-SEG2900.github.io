@@ -15,103 +15,6 @@
   <!-- Styles -->
   <style>
     :root {
-
-      --blue: #c9f6ff;           /* Bleu clair pour les blocs */
-      --text-orange: #ff5a3c;    /* Couleur du texte */
-    }
-
-    body {
-      background: var(--bg-orange);
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    }
-
-    h3, h2 {
-      font-family: 'Sedgwick Ave', cursive;
-    }
-
-    /* Bloc d’intro */
-    .intro {
-      text-align: center;
-      padding: 60px 20px 20px;
-      color: white;
-      font-size: 1.1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    /* Section principale */
-    .features {
-      padding: clamp(16px, 4vw, 48px);
-    }
-
-    .cards {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: clamp(16px, 2.5vw, 28px);
-      grid-template-columns: 1fr;
-    }
-
-    
-    /* Style des blocs */
-    .card {
-      background: var(--blue);
-      border: 10px solid var(--blue);
-      border-radius: 28px;
-      padding: clamp(18px, 2.2vw, 28px);
-      color: var(--text-orange);
-      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.06);
-      text-align: left;
-    }
-
-    .card h2 {
-      margin: 0 0 10px;
-      font-size: clamp(22px, 2.2vw + 8px, 40px);
-      line-height: 1.1;
-      font-weight: 800;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: clamp(15px, 1.1vw + 10px, 18px);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-  </style>
-</head>
-
-<body>
-
-  <p style="text-align: center; color:white;">Links logo to be added</p>
-
-  <div class="intro">
-    <h3>
-      “We created Links because we wished we had a platform like this to guide us when we first started university.
-      <br>
-      Be able to meet people like us, from our community, discover new ones, and not feel alone.
-      <br>
-      So we built Links for you.”
-    </h3>
-  </div>
-
-  <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Links application's Features page">
-  <title>Features | Links</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <style>
-    :root {
       --bg-orange: #ff5a3c;      /* Fond de la page */
       --blue: #c9f6ff;           /* Bleu clair pour les blocs */
       --text-orange: #ff5a3c;    /* Couleur du texte */
@@ -186,16 +89,98 @@
 
 <body>
 
-  <p style="text-align: center; color:white;">Links logo to be added</p>
-
-  <div class="intro">
-    <h3>
-      “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
-      Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
-      So we built Links for you.”
-    </h3>
-  </div>
-
-  <section class="features">
+    <p style="text-align: center; color:white;">Links logo to be added</p>
+  
+    <div class="intro">
+      <h3>
+        “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
+        Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
+        So we built Links for you.”
+      </h3>
+    </div>
+  
+   <section class="features">
     <div class="cards">
-      <!-- 1
+      <!-- 1) WHAT DO WE OFFER -->
+      <article class="card">
+        <h2>WHAT DO WE OFFER</h2>
+        <p>
+          Chaque bulle est pensée pour t’apaiser : lumière tamisée, matières naturelles, ambiance calme.
+          Tout est fait pour créer un espace qui protège sans enfermer.
+        </p>
+      </article>
+  
+      <!-- 2) FOR WHOM -->
+      <article class="card">
+        <h2>FOR WHOM</h2>
+        <p>
+          Jeux de société, objets pour occuper les mains, coloriage, activités manuelles,
+          casques anti-bruit, masques d’hypnose… Autant de petites choses pour t’aider à
+          relâcher la pression et retrouver un peu de calme à ton rythme.
+        </p>
+      </article>
+  
+      <!-- 3) WHAT DO WE PROPOSE -->
+      <article class="card">
+        <h2>WHAT DO WE PROPOSE</h2>
+        <p>
+          Ici, tu n’es jamais seul. Il y a toujours quelqu’un prêt à t’accueillir avec attention,
+          sans te juger, sans te presser. Tu peux rester autant que nécessaire avant de repartir
+          vivre l’évènement.
+        </p>
+      </article>
+    </div>
+  </section>
+  
+  <style>
+    /* Palette proche de tes screenshots */
+    :root{
+      --bg-orange: #ff5a3c;      /* fond page */
+      --blue: #c9f6ff;           /* bleu clair des blocs / bordures */
+      --text-orange: #ff5a3c;    /* textes dans les blocs */
+    }
+  
+    /* Donne ce fond orange si tu veux transformer toute la page */
+    body { background: var(--bg-orange); margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  
+    .features { padding: clamp(16px, 4vw, 48px); }
+    .cards {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(16px, 2.5vw, 28px);
+      grid-template-columns: 1fr;
+    }
+    /* 2 colonnes dès tablette */
+    @media (min-width: 900px){
+      .cards { grid-template-columns: repeat(3, 1fr); }
+    }
+  
+    .card{
+      /* “bordures courbées bleu clair” : on simule un gros liseré bleu grâce à la bordure
+         + on remplit aussi en bleu pour obtenir l’aspect des captures */
+      background: var(--blue);
+      border: 10px solid var(--blue);
+      border-radius: 28px;              /* coins bien arrondis */
+      padding: clamp(18px, 2.2vw, 28px);
+      color: var(--text-orange);
+      box-shadow: 0 6px 0 rgba(0,0,0,0.06);
+    }
+  
+    .card h2{
+      margin: 0 0 10px;
+      font-size: clamp(22px, 2.2vw + 8px, 40px);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+  
+    .card p{
+      margin: 0;
+      font-size: clamp(15px, 1.1vw + 10px, 18px);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+  </style>
+</body>
+</html>
