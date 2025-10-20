@@ -12,112 +12,93 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+  <style>
+    :root {
+      --bg-orange: #ff5a3c;      /* Fond de la page */
+      --blue: #c9f6ff;           /* Bleu clair pour les blocs */
+      --text-orange: #ff5a3c;    /* Couleur du texte */
+    }
+
+    body {
+      background: var(--bg-orange);
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    h3, h2 {
+      font-family: 'Sedgwick Ave', cursive;
+    }
+
+    /* Bloc d’intro */
+    .intro {
+      text-align: center;
+      padding: 60px 20px 20px;
+      color: white;
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Section principale */
+    .features {
+      padding: clamp(16px, 4vw, 48px);
+    }
+
+    .cards {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(16px, 2.5vw, 28px);
+      grid-template-columns: 1fr;
+    }
+
+    /* Trois colonnes dès tablette */
+    @media (min-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Style des blocs */
+    .card {
+      background: var(--blue);
+      border: 10px solid var(--blue);
+      border-radius: 28px;
+      padding: clamp(18px, 2.2vw, 28px);
+      color: var(--text-orange);
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.06);
+      text-align: left;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 2.2vw + 8px, 40px);
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: clamp(15px, 1.1vw + 10px, 18px);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+  </style>
 </head>
 
 <body>
 
-  <p style="text-align: center;">Links logo to be added</p>
+  <p style="text-align: center; color:white;">Links logo to be added</p>
 
-  <div class="block-content">
-    <div class="content-textes-titre-body">
-      <div class="content-titres">
-        <h3 style="text-align: center;" class="header-5 rose-1">
-          &quot; We created Links because we wished we had a platform like this to guide us when we first started university.
-          <br><br>
-          Be able to meet people like us, from our community, discover new ones, and not feel alone.
-          <br><br>
-          So we built Links for you. &quot;
-        </h3>
-      </div>
-    </div>
+  <div class="intro">
+    <h3>
+      “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
+      Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
+      So we built Links for you.”
+    </h3>
   </div>
 
-    <!-- Première rangée -->
-    <div class="bento-multiple">
-      <div data-w-id="6222388e-f064-071b-5120-f21a583c5392" style="opacity:0" class="bento-card texte-seul">
-        <div class="bento-card-textes">
-          <h3 class="header-3 orange-3">WHAT DO WE OFFER<br></h3>
-          <div class="body-2 regular orange-3">
-            Chaque bulle est pensée pour t’apaiser : lumière tamisée, matières naturelles, ambiance calme.
-            <br><br>
-            Tout est fait pour créer un espace qui protège sans enfermer.
-          </div>
-        </div>
-      </div>
-
-      <div data-w-id="87a2cb29-bf7f-c0c8-bde2-1e0b563befa3" style="opacity:0" class="bento-card visuel-seul">
-        <div class="bento-card-content-visual">
-          <img src="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910.webp"
-            loading="lazy"
-            srcset="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910-p-500.webp 500w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910-p-800.webp 800w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910-p-1600.webp 1600w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668b6e7bfed49e93e31613_IMG_3910.webp 1848w"
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-            alt=""
-            class="bento-card-visuel">
-        </div>
-      </div>
-
-      <div data-w-id="2d88a72c-23b6-19ea-9e08-c0c1cb8d5fdb" style="opacity:0" class="bento-card texte-seul">
-        <div class="bento-card-textes">
-          <h3 class="header-3 orange-3">WHAT DO WE PROPOSE<br></h3>
-          <div class="body-2 regular orange-3">
-            Ici, tu n’es jamais seul. Il y a toujours quelqu’un prêt à t’accueillir avec attention, sans te juger, sans te presser.
-            <br><br>
-            Tu peux rester autant que nécessaire avant de repartir vivre l’événement.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Deuxième rangée -->
-    <div class="bento-multiple">
-
-      <div data-w-id="6222388e-f064-071b-5120-f21a583c539f" style="opacity:0" class="bento-card visuel-seul">
-        <div class="bento-card-content-visual">
-          <img src="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18.webp"
-            loading="lazy"
-            srcset="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18-p-500.webp 500w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18-p-800.webp 800w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18-p-1600.webp 1600w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/685ae8006aeb98bef25c105e_Maison%20Bulle2-18.webp 3315w"
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-            alt=""
-            class="bento-card-visuel">
-        </div>
-      </div>
-
-      <div data-w-id="6222388e-f064-071b-5120-f21a583c53a2" style="opacity:0" class="bento-card texte-seul">
-        <div class="bento-card-textes">
-          <h3 class="header-3 orange-3">FOR WHOM<br></h3>
-          <div class="body-2 regular orange-3">
-            Jeux de société, objets pour occuper les mains, coloriage, activités manuelles, casques anti-bruit, masques d’hypnose…
-            <br><br>
-            Autant de petites choses pour t’aider à relâcher la pression et retrouver un peu de calme à ton rythme.
-          </div>
-        </div>
-      </div>
-
-      <div data-w-id="4e43b7bb-ebd7-0799-30bb-7096eb49c75e" style="opacity:0" class="bento-card visuel-seul">
-        <div class="bento-card-content-visual">
-          <img src="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954.webp"
-            loading="lazy"
-            srcset="https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954-p-500.webp 500w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954-p-800.webp 800w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954-p-1080.webp 1080w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954-p-1600.webp 1600w,
-                    https://cdn.prod.website-files.com/682ef968a7c99c2ff27bf900/68668c75139f2ca804ef6296_IMG_3954.webp 1848w"
-            sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-            alt=""
-            class="bento-card-visuel">
-        </div>
-      </div>
-    </div>
-
-  </div> <!-- fin .grille-bento-accueil -->
-
-</body>
-</html>
+  <section class="features">
+    <div class="cards">
+      <!-- 1
