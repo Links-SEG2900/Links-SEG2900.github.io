@@ -1,0 +1,175 @@
+* {
+    font-family: sans-serif;
+}
+
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#navbar {
+    display: flex;
+    width: 100vw;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 5px solid white;
+}
+
+.nav-links {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+}
+
+.user-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    left: 20px;
+    align-self: center;
+    top: 20px;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#user-side>* {
+    display: grid;
+    width: 40vw;
+    height: 10vh;
+    border: 1px solid black;
+    grid-column: 1;
+    position: relative;
+    left: -8px;
+}
+
+#messaging-side>* {
+    display: grid;
+    grid-column: 2;
+    width: 64vw;
+
+}
+
+.user {
+    height: 10px;
+}
+
+.user:hover {
+    background-color: rgb(128, 232, 128);
+    color: white;
+}
+
+.username {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.username:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.phone-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: -70px;
+    left: 80%;
+}
+
+.phone-logo:hover {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -80px;
+    cursor: pointer;
+}
+
+.user_message_receiver_info {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    width: 100vh;
+    height: 80px;
+
+
+}
+
+.username_receiver {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    align-self: center;
+    position: relative;
+    top: -20px;
+    font-weight: bold;
+}
+
+.message_input {
+
+    border-radius: 10px;
+}
+
+.text_input {
+    padding: 10px 305px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+#text_input_container {
+    position: absolute;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    left: 540px;
+}
+
+#send_button {
+    border-radius: 10px;
+    background-color: rgb(38, 219, 38);
+    color: white;
+    padding: 10px 15px;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+#send_button:hover {
+    padding: 15px 15px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.column-title {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+
+}
