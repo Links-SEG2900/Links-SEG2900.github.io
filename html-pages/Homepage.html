@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links: Home Page</title>
+    <link rel="stylesheet" href="Homepage.css">
 </head>
-<body style="background-color:rgb(17, 84, 51);"> 
-    <header style="background-color: black; ">
-        <h1 style="text-align: center;color:white;">HEADER</h1>
+<body>
+    <header>
+        <div class="logo">My Logo</div>
+        <nav>
+            <a href="#">Features</a>
+            <a href="#">About Us</a>
+            <div class="language-switch">
+            <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+            </div>
+        </nav>
     </header>
-    <br>
-    <img src = "link.png" alt="Link Image" style="display:block; margin:auto; width:200px; height:200px; background-color: gray; border-radius: 50%;">
-    <h1 style="text-align:center;" style="font-size:300%;"> Links</h1>
-    <hr>
+    <main> 
+        <br>
+        <br>
+        <img src = "https://icon-library.com/images/link-png-icon/link-png-icon-1.jpg" alt="Link Image">
+        <h1 class="img_h1"> Links</h1>
+        <hr>
 
-    <div style="display:flex; justify-content:center; gap:200px; margin-top:20px;">
-        <button style="background-color:rgb(88, 129, 87); border-radius:12px; width:200px; height:150px; font-size:20px; text-align:center; color:black; border:none;">
-            Product Features
-        </button>
-        <button style="background-color:rgb(88, 129, 87); border-radius:12px; width:200px; height:150px; font-size:20px; text-align:center; color:black; border:none;">
-            About Us
-        </button>
-        <button style="background-color:rgb(88, 129, 87); border-radius:12px; width:200px; height:150px; font-size:20px; text-align:center; color:black; border:none;">
-            Contact
-        </button>
-    </div>
-    <br>
-    <a href="http://127.0.0.1:5500/loginpage.html">
-        <button style="display:block; margin:auto; background-color:rgb(174, 231, 173); border-radius:12px; width:150px; height:50px; font-size:20px; text-align:center; color:black; margin-top:20px; border:none;">
-            Get Started
-        </button>
-    </a>
-    <footer style="background-color: black;">
-        <h1 style="text-align: center;color:white;">FOOTER</h1>
+        <div class="box-container">
+        <a href="http://127.0.0.1:5500/teampage.html" class="menu-box">About Us</a>
+        <a href="http://127.0.0.1:5500/Pricing_page..html" class="menu-box">Pricing Page</a>
+        <a href="http://127.0.0.1:5500/Features_page.html" class="menu-box">Product Features</a>
+        </div>
+            <br>
+            <a href="http://127.0.0.1:5500/log_in_page.html" id="box_GS">Get Started</a>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Policy & Privacy</a>
+            <a href="#">Contact us</a>
+            <a href="#">General conditions</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MySite. All rights reserved.
+        </div>
     </footer>
 </body>
 </html>
