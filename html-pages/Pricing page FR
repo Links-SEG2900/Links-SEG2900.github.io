@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liens - Tarification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #234d38;
+            color: #333;
+        }
+
+        /* ====== CONTENEUR DE TARIFICATION ====== */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 3rem;
+            flex-wrap: wrap;
+        }
+
+        /* ====== CARTE DE PLAN ====== */
+        .plan {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan h2 {
+            margin-top: 0;
+            color: #234d38;
+        }
+
+        .price {
+            font-size: 24px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* ====== FONCTIONNALITÉS ====== */
+        .features {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .features p {
+            margin: 5px 0;
+        }
+
+        /* ====== BOUTON ====== */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #234d38;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1a3628;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="pricing-container">
+
+            <!-- Plan Régulier (Gratuit) -->
+            <div class="plan">
+                <h2>Régulier</h2>
+                <p class="price">Gratuit</p>
+                <div class="features">
+                    <p>✔ Découvrir des étudiants</p>
+                    <p>✔ Rejoindre des groupes publics</p>
+                </div>
+                <a href="#" class="btn">Commencer</a>
+            </div>
+
+            <!-- Plan Premium -->
+            <div class="plan">
+                <h2>Premium</h2>
+                <p class="price">10 $ / mois</p>
+                <div class="features">
+                    <p>✔ Recommandations avancées</p>
+                    <p>✔ Support prioritaire</p>
+                </div>
+                <a href="#" class="btn">Mettre à niveau</a>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
