@@ -87,7 +87,7 @@ img {
 
     /* ----- HEADER ----- */
     header {
-      background-color: #f8f8f8;
+      background-color: #000000d2;
       border-bottom: 1px solid #ddd;
       padding: 15px 30px;
       display: flex;
@@ -98,7 +98,7 @@ img {
     .logo {
       font-size: 24px;
       font-weight: bold;
-      color: #333;
+      color: #fffffff0;
     }
 
     nav {
@@ -109,17 +109,17 @@ img {
 
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #f2f0f0;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #007bff;
+      color: #0077ff;
     }
 
     .language-switch {
-      border-left: 1px solid #ccc;
+      border-left: 1px solid #f2f0f0;
       padding-left: 20px;
       margin-left: 15px;
       font-size: 14px;
@@ -127,12 +127,12 @@ img {
 
     .language-switch a {
       margin: 0 5px;
-      color: #666;
+      color: #f2f0f0;
       text-decoration: none;
     }
 
     .language-switch a:hover {
-      color: #000;
+      color: #f2f0f0;
     }
 
     @media (max-width: 600px) {
