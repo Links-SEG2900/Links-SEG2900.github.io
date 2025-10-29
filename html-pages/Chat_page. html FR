@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table de disponibilité</title>
+    <link href="chat_style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--En-tête-->
+    <nav id="navbar">
+        <a class="nav-links" href="#home">Accueil</a>
+        <a class="nav-links" href="#user-page">Utilisateur</a>
+        <a class="nav-links" href="#pricing">Tarifs</a>
+        <a class="nav-links" href="#about">À propos</a>
+    </nav>
+    <main>
+        <section id="user-side">
+            <!--Chaque utilisateur-->
+            <div class="column-title">
+                <h2><i>Vos liens</i></h2>
+            </div>
+
+            <div class="user">
+                <img class="user-profile-picture" src="https://cdn-icons-png.flaticon.com/512/9201/9201341.png"
+                    alt="Photo de profil" />
+                <p class="username">Azer Adam</p>
+            </div>
+
+            <div class="user">
+                <img class="user-profile-picture" src="https://static.thenounproject.com/png/3918329-200.png"
+                    alt="Photo de profil" />
+                <p class="username">Elizabeth</p>
+            </div>
+            <div class="user">
+                <img class="user-profile-picture" src="https://static.thenounproject.com/png/3918329-200.png"
+                    alt="Photo de profil" />
+                <p class="username">Laurien</p>
+            </div>
+            <div class="user">
+                <img class="user-profile-picture" src="https://static.thenounproject.com/png/3918329-200.png"
+                    alt="Photo de profil" />
+                <p class="username">Pierre</p>
+            </div>
+            <div class="user">
+                <img class="user-profile-picture" src="https://static.thenounproject.com/png/3918329-200.png"
+                    alt="Photo de profil" />
+                <p class="username">Ines</p>
+            </div>
+            <div class="user">
+                <img class="user-profile-picture" src="https://static.thenounproject.com/png/3918329-200.png"
+                    alt="Photo de profil" />
+                <p class="username">James</p>
+            </div>
+        </section>
+        <section id="messaging-side">
+            <div class="user_message_receiver_info">
+                <img class="user-profile-picture" src="https://cdn-icons-png.flaticon.com/512/9201/9201341.png"
+                    alt="Photo de profil" />
+                <p class="username_receiver">Azer Adam</p>
+                <img class="phone-logo"
+                    src="https://images.seeklogo.com/logo-png/24/1/phone-logo-png_seeklogo-248712.png"
+                    alt="Logo téléphone" />
+            </div>
+
+            <div id="text_input_container">
+                <form class="message_input">
+                    <input class="text_input" type="text" placeholder="Entrer un message" />
+                    <button id="send_button" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
