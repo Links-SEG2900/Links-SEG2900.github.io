@@ -43,6 +43,61 @@
             &copy; 2025 MySite. All rights reserved.
         </div>
     </footer>
-    <script src="Homepage.js"></script>
+    <script>
+  const translations = {
+    en: {
+      logo: "My Logo",
+      features: "Product Features",
+      about: "About Us",
+      links: "Links",
+      box1: "About Us",
+      box2: "Pricing Page",
+      box3: "Product Features",
+      getStarted: "Get Started",
+      footer1: "Privacy Policy",
+      footer2: "Contact Us",
+      footer3: "Terms and Conditions",
+      footerBottom: "© 2025 MySite. All rights reserved."
+    },
+    fr: {
+      logo: "Mon Logo",
+      features: "Caractéristiques",
+      about: "À propos de nous",
+      links: "Liens",
+      box1: "À propos de nous",
+      box2: "Page de Tarifs",
+      box3: "Caractéristiques du Produit",
+      getStarted: "Commencer",
+      footer1: "Politique et confidentialité",
+      footer2: "Contactez-nous",
+      footer3: "Conditions générales",
+      footerBottom: "© 2025 MonSite. Tous droits réservés."
+    }
+  };
+
+  document.getElementById("fr-btn").onclick = function() {
+    translate("fr");
+  };
+
+  document.getElementById("en-btn").onclick = function() {
+    translate("en");
+  };
+
+  function translate(lang) {
+    const t = translations[lang];
+    document.querySelector(".logo").textContent = t.logo;
+    document.querySelector("nav a:nth-child(1)").textContent = t.features;
+    document.querySelector("nav a:nth-child(2)").textContent = t.about;
+    document.querySelector(".img_h1").textContent = t.links;
+    document.querySelectorAll(".menu-box")[0].textContent = t.box1;
+    document.querySelectorAll(".menu-box")[1].textContent = t.box2;
+    document.querySelectorAll(".menu-box")[2].textContent = t.box3;
+    document.getElementById("box_GS").textContent = t.getStarted;
+    document.querySelector(".footer-links a:nth-child(1)").textContent = t.footer1;
+    document.querySelector(".footer-links a:nth-child(2)").textContent = t.footer2;
+    document.querySelector(".footer-links a:nth-child(3)").textContent = t.footer3;
+    document.querySelector(".footer-bottom").textContent = t.footerBottom;
+  }
+</script>
 </body>
 </html>
