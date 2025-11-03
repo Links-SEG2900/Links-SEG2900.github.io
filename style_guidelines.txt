@@ -22,9 +22,10 @@ Fonts Used:
 
 Colours:
 -Main Colours
-  -Pastel Green - #
+  -Pastel Green
   -Forest Green
--Font Colours/Less important
+  -Gold
+-Font Colours/Less important/Background colours
   -Black
   -White
   -Grey
