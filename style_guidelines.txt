@@ -1,17 +1,30 @@
 Links has a friendly and approachable design, attempting to highlight the fun of finding friends.
 
 Styles:
-Soft corners
-Connected Design
+-Soft corners
+-Connected Design
+-Very minimal/not to crowded
 
+Buttons:
+-Round corners
+-Hover
+  -Change to lighter color
+  -Should also get a bit bigger
+
+Header:
+-Background Color: Black
+-Text Color: White
 
 Fonts Used:
-Sedgewick Ave - Google Fonts
-
+-Sedgewick Ave - Google Fonts
+-Amaranth
+-Size depends on postions on page
 
 Colours:
-Gold - #
-Pastel Green - #
-
-
-
+-Main Colours
+  -Pastel Green - #
+  -Forest Green
+-Font Colours/Less important
+  -Black
+  -White
+  -Grey
