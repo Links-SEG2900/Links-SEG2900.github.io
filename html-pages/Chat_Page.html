@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Availability Table</title>
     <link href="chat_style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Sedgwick+Ave&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <!--Header-->
     <nav id="navbar">
-        <a class="nav-links" href="#home">Home</a>
-        <a class="nav-links" href="#user-page">User</a>
-        <a class="nav-links" href="#pricing">Pricing</a>
-        <a class="nav-links" href="#about">About</a>
+        <a class="nav-links" href="#home" id="home">Home</a>
+        <a class="nav-links" href="#user-page" id="user">User</a>
+        <a class="nav-links" href="#pricing" id="price">Pricing</a>
+        <a class="nav-links" href="#about" id="about">About</a>
+        <button id="translate">French</button>
     </nav>
     <main>
         <section id="user-side">
             <!--Each user-->
             <div class="column-title">
-                <h2><i>Your Links</i></h2>
+                <h2 class="title"><i>Your Links</i></h2>
 
             </div>
 
@@ -58,8 +65,8 @@
         </section>
         <section id="messaging-side">
             <div class="user_message_receiver_info">
-                <img class="user-profile-picture" src="https://cdn-icons-png.flaticon.com/512/9201/9201341.png"
-                    alt="Profile picture" />
+                <img data-receiver class="user-profile-picture"
+                    src="https://cdn-icons-png.flaticon.com/512/9201/9201341.png" alt="Profile picture" />
                 <p class="username_receiver">Azer Adam</p>
                 <img class="phone-logo"
                     src="https://images.seeklogo.com/logo-png/24/1/phone-logo-png_seeklogo-248712.png"
@@ -71,6 +78,7 @@
                     <input class="text_input" type="text" placeholder="Message Input" />
                     <button id="send_button" type="submit">Send</button>
                 </form>
+                <div id="virtual_keyboard"></div>
 
             </div>
 
@@ -81,5 +89,6 @@
 
 
 </body>
+<script src="script_chat.js"></script>
 
 </html>
