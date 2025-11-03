@@ -1,58 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
-    
-    <title>Links: Team Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-    <body style="background-color:#234d38;background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/infinity_symbol.png'); background-repeat: no-repeat; background-size: 90vw 60vh; background-position: 50% 65%; max-width: 100%; height: auto;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Links: Team Page</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        <header style="background-color: black;">
-            <h1 style="text-align: center;color:white;">HEADER TO BE ADDED WITH CSS</h1>        
-        </header>
-        <hr>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        <h1 style="text-align:center;font-size:200%;color: white;"> Meet our Team <br> Découvrez notre équipe </h1>
-        <br>
+    header {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        <div style="display:flex; justify-content:center; gap:400px; margin-top:30px;">
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:20px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            Azer Adam
-        </button>
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:20px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            Ines Bouchama
-        </button>
-        </div>
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
 
-        <div style="display:flex; justify-content:center; gap:1000px; margin-top:40px;">
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:15px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            Laurien Michel Muhire
-        </button>
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:15px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            Elizabeth Odebowale
-        </button>
-        </div>
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
 
-        <div style="display:flex; justify-content:center; gap:250px; margin-top:48px;">
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:15px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            James Rousseau
-        </button>
-        <button style="background-color:rgb(236, 231, 231); border-radius:12px; width:160px; height:200px; font-size:15px; line-height: 230px; text-align:center; color:black; border:none; background-image: url('https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png'); background-repeat: no-repeat; background-size: 11vw 13vh; background-position: 50% 2%;">
-            Pierre Teyou Gaiss
-        </button>
-        </div>
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
 
-       
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    .language-switch {
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .language-switch a {
+      margin: 0 5px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .language-switch a:hover {
+      color: #000;
+    }
+
+     footer {
+      background-color: #222;
+      color: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .language-switch {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+    .pageinfo {
+        height: 776px;
+    }
+    .teamheader {
+    text-align:center;
+    font-size:200%;
+    margin: 20px 0;
+    }
+
+    .profile-box-top {
+        display: inline-block;
+        text-align: center;
+        margin: 50px;
+    }
+
+    .profile-box-top p {
+    font-size: 24px;
+    }
+
+    .pb {
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        transition: box-shadow 0.3s ease;
         
+    }
+    .pb img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display: block;
+    }
+    .pb:hover {
+        box-shadow: 0px 0px 25px rgb(224, 228, 10);
+    }
 
-        <hr>
-        <footer style="background-color: black;">
-            <h1 style="text-align: center;color:white;">FOOTER TO BE ADDED WITH CSS</h1>
-        </footer>
 
-    </body>
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MonLogo</div>
+    <nav>
+      <a href="#" id="header_features">Features</a>
+      <a href="#" id="header_pricing">Pricing</a>
+      <a href="#" id="header_meetourteam">Meet Our Team</a>
+      <div class="language-switch">
+        <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+      </div>
+    </nav>
+  </header>
+
+    <div class="pageinfo">
+        <div class="teamheader" id="Header">Meet the Team!</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb1link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb1name">Azer Adam</p>
+            <p id="pb1title">Co-Founder</p>
+        </div>
+
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb2link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb2name">Ines Bouchama</p>
+            <p id="pb2title">Co-Founder</p>
+        </div>
+
+
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb3link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb3name">Laurien Michel Muhire</p>
+            <p id="pb3title">Co-Founder</p>
+        </div>
+
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb4link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb4name">Elizabeth Odebowale</p>
+            <p id="pb4title">Co-Founder</p>
+        </div>
+
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb5link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb5name">James Rousseau</p>
+            <p id="pb5title">Co-Founder</p>
+        </div>
+
+        <div class="profile-box-top">
+            <div class="pb">
+                <a href="http://google.com" id="pb6link">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                </a>
+            </div>
+            <p id="pb6name">Pierre Teyou Gaiss</p>
+            <p id="pb6title">Co-Founder</p>
+        </div>
+
+  
+    </div>
+  <footer>
+    <div class="footer-links">
+    </div>
+    <div class="footer-bottom", id="footertext">
+      &copy; Links 2025. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <script>
+  const translations = {
+    en: {
+        title: "Meet the Team!",
+        pb1title: "Co-Founder",
+        pb2title: "Co-Founder",
+        pb3title: "Co-Founder",
+        pb4title: "Co-Founder",
+        pb5title: "Co-Founder",
+        pb6title: "Co-Founder",
+        features_header: "Features",
+        features_pricing: "Pricing",
+        features_team: "Meet our Team",
+        footer_text: "© Links 2025. All Rights Reserved."
+
+     
+    },
+    fr: {
+        title: "Meet the Team!",
+        pb1title: "Co-Fondateur",
+        pb2title: "Co-Fondateur",
+        pb3title: "Co-Fondateur",
+        pb4title: "Co-Fondateur",
+        pb5title: "Co-Fondateur",
+        pb6title: "Co-Fondateur",
+        features_header: "Caractéristiques",
+        features_pricing: "Abonnements",
+        features_team: "À propos de nous",
+        footer_text: "© 2025 Links. Tous droits réservés."
+    }
+  };
+
+  document.getElementById("fr-btn").onclick = function() {
+    translate("fr");
+  };
+
+  document.getElementById("en-btn").onclick = function() {
+    translate("en");
+  };
+
+  function translate(lang) {
+    const t = translations[lang];
+    document.getElementById("Header").textContent = t.title;
+    document.getElementById("pb1title").textContent = t.pb1title;
+    document.getElementById("pb2title").textContent = t.pb2title;
+    document.getElementById("pb3title").textContent = t.pb3title;
+    document.getElementById("pb4title").textContent = t.pb4title;
+    document.getElementById("pb5title").textContent = t.pb5title;
+    document.getElementById("pb6title").textContent = t.pb6title;
+    document.getElementById("header_features").textContent = t.features_header;
+    document.getElementById("header_pricing").textContent = t.features_pricing;
+    document.getElementById("header_meetourteam").textContent = t.features_team;
+    document.getElementById("footertext").textContent = t.footer_text;
+  }
+
+  </script>
+</body>
 </html>
