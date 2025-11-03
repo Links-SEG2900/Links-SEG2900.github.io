@@ -12,6 +12,11 @@ const users = document.querySelectorAll(".user");
 const receiver_Image = document.querySelector("[data-receiver]");
 const receiver_Name = document.querySelector(".username_receiver");
 
+//Submit button
+const submit_btn = document.getElementById("send_button");
+//Input placeholder
+const text_input = document.querySelector(".text_input");
+
 //Virtual Keyboard container
 const keyboard = document.getElementById("virtual_keyboard");
 
@@ -34,12 +39,16 @@ transl.addEventListener("click", () => {
         about.textContent = "A propos";
         title.textContent = "Tes Links";
         title.style.fontStyle = "italic";
+        submit_btn.textContent = "Envoyer";
+        text_input.placeholder = "Tapez votre message ici...";
     }
     else {
         users.textContent = "User";
         price.textContent = "Price";
         about.textContent = "About";
         title.textContent = "Your Links";
+        submit_btn.textContent = "Send";
+        text_input.placeholder = "Type your message here...";
     }
 
 
