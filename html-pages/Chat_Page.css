@@ -153,7 +153,7 @@ main {
 }
 
 .text_input {
-    padding: 10px 295px;
+    padding: 10px 285px;
     border: 2px solid var(--dark);
     border-radius: 10px;
 }
