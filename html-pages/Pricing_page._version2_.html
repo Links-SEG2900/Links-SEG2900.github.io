@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Links - Pricing</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #234d38; /* dark green background */
+        color: #333;
+      }
+
+      /* ====== HEADER LANGUAGE SWITCH ====== */
+      header {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px;
+      }
+      .lang-btn {
+        background: #234d38;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-weight: 600;
+      }
+      .lang-btn:hover {
+        background: #1a3628;
+      }
+      .lang-btn.active {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+
+      /* ====== PRICING CONTAINER ====== */
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin: 3rem;
+        flex-wrap: wrap;
+      }
+
+      /* ====== PLAN CARD ====== */
+      .plan {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        width: 280px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
+      .plan h2 {
+        margin-top: 0;
+        color: #234d38;
+      }
+      .price {
+        font-size: 24px;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      /* ====== FEATURES ====== */
+      .features {
+        margin: 15px 0;
+        text-align: left;
+      }
+      .features p {
+        margin: 5px 0;
+      }
+
+      /* ====== BUTTON ====== */
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #234d38;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      .btn:hover {
+        background: #1a3628;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== LANGUAGE SWITCH ====== -->
+    <header>
+      <button id="btnEN" class="lang-btn active">EN</button>
+      <button id="btnFR" class="lang-btn">FR</button>
+    </header>
+
+    <!-- ====== PRICING ONLY ====== -->
+    <main>
+      <div class="pricing-container">
+        <!-- Regular (Free) Plan -->
+        <div class="plan" id="planRegular">
+          <h2>Regular</h2>
+          <p class="price">Free</p>
+          <div class="features">
+            <p>✔ Discover students</p>
+            <p>✔ Join public groups</p>
+          </div>
+          <a href="#" class="btn" id="btnRegularCTA">Get Started</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="plan" id="planPremium">
+          <h2>Premium</h2>
+          <p class="price">$10 / month</p>
+          <div class="features">
+            <p>✔ Advanced recommendations</p>
+            <p>✔ Priority support</p>
+          </div>
+          <a href="#" class="btn" id="btnPremiumCTA">Upgrade</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== JS: Functionality + Translation ====== -->
+    <script>
+      // Translations dictionary
+      const translations = {
+        en: {
+          regular: "Regular",
+          premium: "Premium",
+          priceFree: "Free",
+          pricePremium: "$10 / month",
+          featuresRegular: ["✔ Discover students", "✔ Join public groups"],
+          featuresPremium: ["✔ Advanced recommendations", "✔ Priority support"],
+          btnRegular: "Get Started",
+          btnPremium: "Upgrade",
+          alertRegular: "You selected the Regular plan!",
+          alertPremium: "Thanks for choosing Premium!",
+        },
+        fr: {
+          regular: "Régulier",
+          premium: "Premium",
+          priceFree: "Gratuit",
+          pricePremium: "10 $ / mois",
+          featuresRegular: [
+            "✔ Découvrir des étudiants",
+            "✔ Rejoindre des groupes publics",
+          ],
+          featuresPremium: [
+            "✔ Recommandations avancées",
+            "✔ Support prioritaire",
+          ],
+          btnRegular: "Commencer",
+          btnPremium: "Mettre à niveau",
+          alertRegular: "Vous avez choisi l’offre Régulier !",
+          alertPremium: "Merci d’avoir choisi l’offre Premium !",
+        },
+      };
+
+      // Cache DOM references
+      const btnEN = document.getElementById("btnEN");
+      const btnFR = document.getElementById("btnFR");
+
+      const planRegular = document.getElementById("planRegular");
+      const planPremium = document.getElementById("planPremium");
+
+      const regularTitle = planRegular.querySelector("h2");
+      const premiumTitle = planPremium.querySelector("h2");
+
+      const regularPrice = planRegular.querySelector(".price");
+      const premiumPrice = planPremium.querySelector(".price");
+
+      const regularFeatures = planRegular.querySelector(".features");
+      const premiumFeatures = planPremium.querySelector(".features");
+
+      const btnRegularCTA = document.getElementById("btnRegularCTA");
+      const btnPremiumCTA = document.getElementById("btnPremiumCTA");
+
+      // Current language state
+      let currentLang = "en";
+
+      // Update page texts based on language
+      function updateLanguage(lang) {
+        const t = translations[lang];
+        currentLang = lang;
+
+        // Toggle active styling on language buttons
+        btnEN.classList.toggle("active", lang === "en");
+        btnFR.classList.toggle("active", lang === "fr");
+
+        // Titles
+        regularTitle.textContent = t.regular;
+        premiumTitle.textContent = t.premium;
+
+        // Prices
+        regularPrice.textContent = t.priceFree;
+        premiumPrice.textContent = t.pricePremium;
+
+        // Features
+        regularFeatures.innerHTML = t.featuresRegular
+          .map((f) => `<p>${f}</p>`)
+          .join("");
+        premiumFeatures.innerHTML = t.featuresPremium
+          .map((f) => `<p>${f}</p>`)
+          .join("");
+
+        // CTAs
+        btnRegularCTA.textContent = t.btnRegular;
+        btnPremiumCTA.textContent = t.btnPremium;
+      }
+
+      // Button click functionality (basic alerts)
+      btnRegularCTA.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(translations[currentLang].alertRegular);
+      });
+
+      btnPremiumCTA.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(translations[currentLang].alertPremium);
+      });
+
+      // Language switch events
+      btnEN.addEventListener("click", () => updateLanguage("en"));
+      btnFR.addEventListener("click", () => updateLanguage("fr"));
+
+      // Initialize page in English
+      updateLanguage("en");
+    </script>
+  </body>
+</html>
