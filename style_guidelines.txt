@@ -22,9 +22,9 @@ Fonts Used:
 
 Colours:
 -Main Colours
-  -Pastel Green
-  -Forest Green
-  -Gold
+  -Pastel Green #c1e1c1
+  -Forest Green #145314
+  -Gold #EFBF04
 -Font Colours/Less important/Background colours
   -Black
   -White
