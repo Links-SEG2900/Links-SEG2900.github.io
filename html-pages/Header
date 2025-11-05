@@ -92,6 +92,7 @@
     <nav>
       <a href="#">Caractéristiques</a>
       <a href="#">À propos de nous</a>
+      <a href="#">Tarifs</a>
       <div class="language-switch">
         <a href="#">FR</a> | <a href="#">EN</a>
       </div>
