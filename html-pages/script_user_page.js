@@ -4,6 +4,7 @@ const transl = document.getElementById("translate");
 
 //Navlink button
 const user_nav = document.getElementById("user");
+const all_user = document.querySelectorAll(".user")
 const price = document.getElementById("price");
 const about = document.getElementById("about");
 
@@ -49,4 +50,13 @@ transl.addEventListener("mouseleave", () => {
     transl.style.color = "white";
     transl.style.border = "2px solid white";
     transl.style.padding = "7px 10px";
+});
+
+all_user.forEach(user => {
+    user.addEventListener("click", () => {
+        //<a href="./project_chat_page.html"></a>
+        let pers = window.location.href = "/project_chat_page.html";
+        pers
+
+    });
 });
