@@ -13,11 +13,12 @@
 
     body {
       font-family: Arial, sans-serif;
+      background-color: #c1e1c1;
     }
 
     header {
       background-color: #f8f8f8;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #c1e1c1;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
@@ -120,6 +121,8 @@
 
     .pageinfo {
         height: 776px;
+        background-color: #c1e1c1;
+
     }
     .teamheader {
     text-align:center;
@@ -152,8 +155,14 @@
         border-radius: 50%;
         display: block;
     }
-    .pb:hover {
+    .pb img:hover {
         box-shadow: 0px 0px 25px rgb(224, 228, 10);
+    }
+
+    
+    .updatedheader img{
+        height: 30px;
+        width: 100px;
     }
 
 
@@ -163,10 +172,14 @@
 <body>
 
   <header>
-    <div class="logo">MonLogo</div>
+     <div class="updatedheader">
+                <a href="https://links-seg2900.github.io/html-pages/Homepage.html" id="headerLink">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
+                </a>
+        </div>
     <nav>
-      <a href="#" id="header_features">Features</a>
-      <a href="#" id="header_pricing">Pricing</a>
+      <a href="https://links-seg2900.github.io/html-pages/Features_page.html" id="header_features">Features</a>
+      <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html" id="header_pricing">Pricing</a>
       <a href="#" id="header_meetourteam">Meet Our Team</a>
       <div class="language-switch">
         <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
@@ -271,7 +284,7 @@
      
     },
     fr: {
-        title: "Meet the Team!",
+        title: "Recontre l'Équipe!",
         pb1title: "Co-Fondateur",
         pb2title: "Co-Fondateur",
         pb3title: "Co-Fondateur",
