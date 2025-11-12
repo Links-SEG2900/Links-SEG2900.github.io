@@ -16,7 +16,7 @@
     }
 
     header {
-      background-color: #f8f8f8;
+      background-color: #C1E1C1;
       border-bottom: 1px solid #ddd;
       padding: 15px 30px;
       display: flex;
