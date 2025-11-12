@@ -14,6 +14,84 @@
 
   <!-- Styles -->
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    .language-switch {
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .language-switch a {
+      margin: 0 5px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .language-switch a:hover {
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .language-switch {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
     :root {
       --bg-color: #c1e1c1;       /* Fond de la page */
       --blue: #c9f6ff;           /* Bleu clair pour les blocs */
