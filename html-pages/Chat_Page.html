@@ -11,18 +11,258 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Sedgwick+Ave&display=swap"
         rel="stylesheet">
+    <style>
+        * {
+    font-family: Sedgwick Ave;
+    --pastel-green: #C1E1C1;
+    --dark: black;
+    --text-color: Gold;
+    --simplistic: white;
+
+}
+
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#navbar {
+    display: flex;
+    width: 100vw;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark);
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-bottom: 5px solid white;
+}
+
+.nav-links {
+    color: var(--simplistic);
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    border: 2px solid var(--simplistic);
+    padding: 3px 8px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.nav-links:hover {
+    background-color: var(--simplistic);
+    color: var(--dark);
+    cursor: pointer;
+    border: 2px solid var(--dark);
+    padding: 10px;
+}
+
+.user-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    left: 20px;
+    align-self: center;
+    top: 20px;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#user-side>* {
+    display: grid;
+    width: 40vw;
+    height: 10vh;
+    border: 1px solid var(--dark);
+    grid-column: 1;
+    position: relative;
+    left: -8px;
+}
+
+#messaging-side>* {
+    display: grid;
+    grid-column: 2;
+    width: 64vw;
+
+}
+
+.user {
+    height: 10px;
+}
+
+.user:hover {
+    background-color: var(--pastel-green);
+    color: var(--simplistic);
+}
+
+.username {
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    font-size: 18px;
+
+}
+
+.username:hover {
+    color: var(--simplistic);
+    cursor: pointer;
+}
+
+.phone-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: -70px;
+    left: 80%;
+}
+
+.phone-logo:hover {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -80px;
+    cursor: pointer;
+}
+
+.user_message_receiver_info {
+    display: inline-block;
+    border-bottom: 1px solid var(--dark);
+    width: 100vh;
+    height: 80px;
+
+
+}
+
+.username_receiver {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    align-self: center;
+    position: relative;
+    top: -20px;
+    font-weight: bold;
+}
+
+.message_input {
+
+    border-radius: 10px;
+}
+
+.text_input {
+    padding: 10px 285px;
+    border: 2px solid var(--dark);
+    border-radius: 10px;
+}
+
+
+#text_input_container {
+    position: absolute;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    left: 540px;
+
+}
+
+#send_button {
+    border-radius: 10px;
+    background-color: var(--pastel-green);
+    color: var(--dark);
+    padding: 10px 15px;
+    border: 2px solid var(--dark);
+    font-weight: bold;
+}
+
+#send_button:hover {
+    padding: 15px 15px;
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.column-title {
+    background-color: var(--dark);
+    color: var(--pastel-green);
+    text-align: center;
+
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+footer {
+    background-color: #C1E1C1;
+    color: #eee;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 160px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #888;
+}
+
+@media (max-width: 600px) {
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+    </style>
 
 </head>
 
 <body>
     <!--Header-->
-    <nav id="navbar">
-        <a class="nav-links" href="#home" id="home">Home</a>
-        <a class="nav-links" href="#user-page" id="user">User</a>
-        <a class="nav-links" href="#pricing" id="price">Pricing</a>
-        <a class="nav-links" href="#about" id="about">About</a>
-        <button id="translate">French</button>
-    </nav>
+    <header>
+        <nav id="navbar">
+            <a class="nav-links" href="./home_page.html" id="home">Home</a>
+            <a class="nav-links" href="./project_user_page.html" id="user">User</a>
+            <a class="nav-links" href="./pricing_page.html" id="price">Pricing</a>
+            <a class="nav-links" href="./team_page.html" id="about">About</a>
+            <button id="translate">French</button>
+        </nav>
+    </header>
     <main>
         <section id="user-side">
             <!--Each user-->
@@ -85,10 +325,157 @@
 
         </section>
 
+
     </main>
-
-
+    <footer>
+        <div class="footer-links">
+            <a href="#">Politique et confidentialité</a>
+            <a href="#">Contactez-nous</a>
+            <a href="#">Conditions générales</a>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MonSite. Tous droits réservés.
+        </div>
+    </footer>
 </body>
-<script src="script_chat.js"></script>
+<script src="script_chat.js">
+    //Translate Button
+const transl = document.getElementById("translate");
+//Navlink button
+const user_nav = document.getElementById("user");
+const price = document.getElementById("price");
+const about = document.getElementById("about");
+const title = document.querySelector(".title");
+//Contacts for users
+const users = document.querySelectorAll(".user");
+
+//Receiver info
+const receiver_Image = document.querySelector("[data-receiver]");
+const receiver_Name = document.querySelector(".username_receiver");
+
+//Submit button
+const submit_btn = document.getElementById("send_button");
+//Input placeholder
+const text_input = document.querySelector(".text_input");
+
+//Virtual Keyboard container
+const keyboard = document.getElementById("virtual_keyboard");
+
+//Stylling translate button
+transl.style.backgroundColor = "black";
+transl.style.color = "white";
+transl.style.padding = "7px 10px";
+transl.style.border = "2px solid white";
+transl.style.borderRadius = "10px";
+
+
+
+//Translation button function
+transl.addEventListener("click", () => {
+    const cur = transl.textContent.trim().toLowerCase();
+    transl.textContent = cur.includes('english') ? 'French' : 'English';
+    if (transl.textContent == "English") {
+        user_nav.textContent = "Utillisateur";
+        price.textContent = "Prix";
+        about.textContent = "A propos";
+        title.textContent = "Tes Links";
+        title.style.fontStyle = "italic";
+        submit_btn.textContent = "Envoyer";
+        text_input.placeholder = "Tapez votre message ici...";
+    }
+    else {
+        users.textContent = "User";
+        price.textContent = "Price";
+        about.textContent = "About";
+        title.textContent = "Your Links";
+        submit_btn.textContent = "Send";
+        text_input.placeholder = "Type your message here...";
+    }
+
+
+});
+//Hover
+transl.addEventListener("mouseenter", () => {
+    transl.style.backgroundColor = "white";
+    transl.style.color = "black";
+    transl.style.cursor = "pointer";
+    transl.style.border = "2px solid white";
+    transl.style.padding = "16px";
+});
+transl.addEventListener("mouseleave", () => {
+    transl.style.backgroundColor = "black";
+    transl.style.color = "white";
+    transl.style.border = "2px solid white";
+    transl.style.padding = "7px 10px";
+});
+
+//User selection
+users.forEach(user => {
+    user.addEventListener("click", () => {
+        const img = user.querySelector(".user-profile-picture").src;
+        const name = user.querySelector(".username").textContent;
+
+        receiver_Image.src = img;
+        receiver_Name.textContent = name;
+    })
+});
+
+const keys = [
+    "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace",
+    "Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\",
+    "Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter",
+    "Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift",
+    "Ctrl", "Fn", "Windows", "Alt", "Space", "Alt", "Menu", "Ctrl",
+    "Left", "Up", "Down", "Right"
+];
+
+// Create virtual keyboard
+keys.forEach(key => {
+    //Creates button
+    const keyElement = document.createElement("button");
+    //Adds button text of what the key is
+    keyElement.textContent = key;
+    //Adds class to each key
+    keyElement.classList.add("key_element");
+    //Appends each key to the keyboard container
+    keyboard.append(keyElement);
+    keyElement.style.backgroundColor = "black";
+    keyElement.style.color = "white";
+    keyElement.style.margin = "3px";
+    keyElement.style.padding = "8px";
+
+
+    keyElement.addEventListener("click", () => {
+        if (key === "Backspace") {
+            text_input.value = text_input.value.slice(0, 1)
+        }
+        //if (key ==)
+    });
+
+
+
+
+});
+
+
+//Keyboard styling
+keyboard.style.display = "grid";
+keyboard.style.gridTemplateColumns = "repeat(16, auto)";
+keyboard.style.gridTemplateRows = "auto";
+keyboard.style.justifyContent = "center";
+keyboard.style.marginTop = "10px";
+keyboard.style.flexDirection = "column";
+//Input field stylying
+const text_input_container = document.getElementById("text_input_container");
+text_input_container.style.display = "flex";
+text_input_container.style.justifyContent = "center";
+text_input_container.style.alignItems = "center";
+text_input_container.style.flexDirection = "column";
+text_input_container.style.margin = "auto";
+
+
+
+
+</script>
 
 </html>
