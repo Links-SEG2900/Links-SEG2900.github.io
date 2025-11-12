@@ -14,15 +14,24 @@
 
   <!-- Styles -->
   <style>
-    
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    :root {
+      --bg-color: #c1e1c1;
+      --blue: #c9f6ff;
+      --text-orange: #ff5a3c;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      background: var(--bg-color);
+      font-family: 'Amaranth', sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      margin: 0;
     }
 
     header {
@@ -34,10 +43,9 @@
       align-items: center;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
+    .updatedheader img {
+      height: 30px;
+      width: 100px;
     }
 
     nav {
@@ -57,63 +65,7 @@
       color: #007BFF;
     }
 
-    .language-switch {
-      border-left: 1px solid #ccc;
-      padding-left: 20px;
-      margin-left: 15px;
-      font-size: 14px;
-    }
-
-    .language-switch a {
-      margin: 0 5px;
-      color: #666;
-      text-decoration: none;
-    }
-
-    .language-switch a:hover {
-      color: #000;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .language-switch {
-        border-left: none;
-        padding-left: 0;
-        margin-left: 0;
-        margin-top: 10px;
-      }
-    }
-    :root {
-      --bg-color: #c1e1c1;       /* Fond de la page */
-      --blue: #c9f6ff;           /* Bleu clair pour les blocs */
-      --text-orange: #c1e1c1;    /* Couleur du texte */
-    }
-
-    body {
-      background: var(--bg-color);
-      margin: 0;
-      font-family: 'Amaranth', sans-serif;
-      font-weight: 700;
-      font-style: normal;
-    }
-
-    h2, h3 {
-      font-family: 'Amaranth', sans-serif;
-      font-weight: 700;
-      font-style: normal;
-    }
-
-    /* Bloc d’intro */
+    /* Intro */
     .intro {
       text-align: center;
       padding: 60px 20px 20px;
@@ -123,7 +75,7 @@
       margin: 0 auto;
     }
 
-    /* Section principale */
+    /* Features section */
     .features {
       padding: clamp(16px, 4vw, 48px);
     }
@@ -136,14 +88,12 @@
       grid-template-columns: 1fr;
     }
 
-    /* Trois colonnes dès tablette */
     @media (min-width: 900px) {
       .cards {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    /* Style des blocs */
     .card {
       background: var(--blue);
       border: 10px solid var(--blue);
@@ -157,7 +107,6 @@
     .card h2 {
       margin: 0 0 10px;
       font-size: clamp(22px, 2.2vw + 8px, 40px);
-      line-height: 1.1;
       font-weight: 800;
     }
 
@@ -165,7 +114,6 @@
       margin: 0;
       font-size: clamp(15px, 1.1vw + 10px, 18px);
       line-height: 1.5;
-      font-weight: 500;
     }
 
     ul {
@@ -178,7 +126,7 @@
       margin-top: 40px;
       color: white;
     }
-    
+
     footer {
       background-color: #C1E1C1;
       color: #eee;
@@ -209,15 +157,21 @@
     }
 
     @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
       .footer-links a {
         display: block;
         margin: 10px 0;
       }
-    }
-
-    .updatedheader img{
-        height: 30px;
-        width: 100px;
     }
   </style>
 </head>
@@ -225,22 +179,19 @@
 <body>
   <header>
     <div class="updatedheader">
-                <a href="https://links-seg2900.github.io/html-pages/Homepage.html" id="headerLink">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
-                </a>
-      </div>
+      <a href="https://links-seg2900.github.io/html-pages/Homepage.html" id="headerLink">
+        <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png" alt="Links logo">
+      </a>
+    </div>
     <nav>
-      <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+      <a href="#" id="fr-btn">FR</a> |
+      <a href="#" id="en-btn">EN</a>
       <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html" id="header_pricing">Pricing</a>
-      <a href="https://github.com/Links-SEG2900/Links-SEG2900.github.io/blob/f6c91c54cedd9f176360f30fee53776e3ba9f7f0/html-pages/teampage.html" id="header_meetourteam">Meet Our Team</a>
-      
-      
+      <a href="https://links-seg2900.github.io/html-pages/teampage.html" id="header_meetourteam">Meet Our Team</a>
     </nav>
   </header>
 
-  
-
-  <div class="intro">
+  <div class="intro" id="intro-text">
     <h3>
       “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
       Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
@@ -250,26 +201,25 @@
 
   <section class="features">
     <div class="cards">
-      <!-- 1) WHAT DO WE OFFER -->
       <article class="card">
-        <h2>FOR WHAT</h2>
-        <p>We allow university students, whether new or returning, to discover new people and make new connections based on things in common, shared interests, and even shared classes.</p>
+        <h2 id="forwhat-title">FOR WHAT</h2>
+        <p id="forwhat-text">
+          We allow university students, whether new or returning, to discover new people and make new connections based on things in common, shared interests, and even shared classes.
+        </p>
       </article>
 
-      <!-- 2) FOR WHOM -->
       <article class="card">
-        <h2>FOR WHOM</h2>
-        <p>
+        <h2 id="forwhom-title">FOR WHOM</h2>
+        <p id="forwhom-text">
           Our targeted public is mostly the 1st year students.<br>
           But it's designed for all UOttawa students.
         </p>
       </article>
 
-      <!-- 3) WHAT DO WE PROPOSE -->
       <article class="card">
-        <h2>WHAT DO WE PROPOSE</h2>
-        <p>You will get to:</p>
-        <ul>
+        <h2 id="whatpropose-title">WHAT DO WE PROPOSE</h2>
+        <p id="whatpropose-text">You will get to:</p>
+        <ul id="whatpropose-list">
           <li>Look up people and get connected to them</li>
           <li>Chat with your friends</li>
           <li>Discover communities based on your origin, music taste, favorite activities..., and get in the group discussion</li>
@@ -279,19 +229,81 @@
       </article>
     </div>
 
-    <h3 class="bottom">This web site is made by students for students</h3>
+    <h3 class="bottom" id="bottom-text">This website is made by students for students</h3>
   </section>
-<!-- Contenu principal de la page ici -->
 
   <footer>
     <div class="footer-links">
-      <a href="#">Politique et confidentialité</a>
-      <a href="#">Contactez-nous</a>
-      <a href="#">Conditions générales</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact us</a>
+      <a href="#">Terms and Conditions</a>
     </div>
-    <div class="footer-bottom">
-      &copy; 2025 MonSite. Tous droits réservés.
-    </div>
+    <div class="footer-bottom">&copy; 2025 Links. All rights reserved.</div>
   </footer>
+
+  <script>
+    const frBtn = document.getElementById("fr-btn");
+    const enBtn = document.getElementById("en-btn");
+
+    const translations = {
+      fr: {
+        intro: "« Nous avons créé Links car nous aurions aimé avoir une plateforme comme celle-ci pour nous guider lorsque nous avons commencé l’université.<br><br>Pouvoir rencontrer des personnes comme nous, issues de notre communauté, en découvrir de nouvelles et ne pas se sentir seul.<br><br>C’est pourquoi nous avons créé Links, pour vous. »",
+        forwhatTitle: "POURQUOI",
+        forwhatText: "Nous permettons aux étudiants universitaires, nouveaux ou anciens, de découvrir de nouvelles personnes et de créer des liens basés sur des points communs, des intérêts partagés ou même des cours suivis ensemble.",
+        forwhomTitle: "POUR QUI",
+        forwhomText: "Notre public cible est principalement les étudiants de première année,<br>mais la plateforme est conçue pour tous les étudiants de l’Université d’Ottawa.",
+        whatproposeTitle: "CE QUE NOUS PROPOSONS",
+        whatproposeText: "Vous pourrez :",
+        whatproposeList: [
+          "Chercher des personnes et vous connecter à elles",
+          "Discuter avec vos amis",
+          "Découvrir des communautés selon vos origines, goûts musicaux ou activités préférées, et rejoindre leurs discussions",
+          "Découvrir les événements à venir",
+          "Obtenir la version premium pour accéder à encore plus d’opportunités !"
+        ],
+        bottomText: "Ce site web est fait par des étudiants, pour des étudiants"
+      },
+      en: {
+        intro: "“We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>So we built Links for you.”",
+        forwhatTitle: "FOR WHAT",
+        forwhatText: "We allow university students, whether new or returning, to discover new people and make new connections based on things in common, shared interests, and even shared classes.",
+        forwhomTitle: "FOR WHOM",
+        forwhomText: "Our targeted public is mostly the 1st year students.<br>But it's designed for all UOttawa students.",
+        whatproposeTitle: "WHAT DO WE PROPOSE",
+        whatproposeText: "You will get to:",
+        whatproposeList: [
+          "Look up people and get connected to them",
+          "Chat with your friends",
+          "Discover communities based on your origin, music taste, favorite activities..., and get in the group discussion",
+          "Get to know about the upcoming events",
+          "Get the premium version to have access to more opportunities!"
+        ],
+        bottomText: "This website is made by students for students"
+      }
+    };
+
+    function translate(lang) {
+      document.getElementById("intro-text").innerHTML = `<h3>${translations[lang].intro}</h3>`;
+      document.getElementById("forwhat-title").textContent = translations[lang].forwhatTitle;
+      document.getElementById("forwhat-text").innerHTML = translations[lang].forwhatText;
+      document.getElementById("forwhom-title").textContent = translations[lang].forwhomTitle;
+      document.getElementById("forwhom-text").innerHTML = translations[lang].forwhomText;
+      document.getElementById("whatpropose-title").textContent = translations[lang].whatproposeTitle;
+      document.getElementById("whatpropose-text").textContent = translations[lang].whatproposeText;
+
+      const list = document.getElementById("whatpropose-list");
+      list.innerHTML = "";
+      translations[lang].whatproposeList.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+
+      document.getElementById("bottom-text").textContent = translations[lang].bottomText;
+    }
+
+    frBtn.addEventListener("click", () => translate("fr"));
+    enBtn.addEventListener("click", () => translate("en"));
+  </script>
 </body>
 </html>
