@@ -15,19 +15,23 @@
   <!-- Styles -->
   <style>
     :root {
-      --bg-light blue: #dbf5fa;      /* Fond de la page */
+      --bg-color: #c1e1c1;       /* Fond de la page */
       --blue: #c9f6ff;           /* Bleu clair pour les blocs */
       --text-orange: #ff5a3c;    /* Couleur du texte */
     }
 
     body {
-      background: c1e1c1;
+      background: var(--bg-color);
       margin: 0;
-      font-family: 'Amaranth', sans-serif;font-weight: 700;  font-style: normal;";
+      font-family: 'Amaranth', sans-serif;
+      font-weight: 700;
+      font-style: normal;
     }
 
-    h3, h2 {
-      style="font-family: 'Amaranth', sans-serif; font-weight: 700; font-style: normal;"
+    h2, h3 {
+      font-family: 'Amaranth', sans-serif;
+      font-weight: 700;
+      font-style: normal;
     }
 
     /* Bloc d’intro */
@@ -84,106 +88,65 @@
       line-height: 1.5;
       font-weight: 500;
     }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    h3.bottom {
+      text-align: center;
+      margin-top: 40px;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
 
-    <p style="text-align: center; color:white;">Links logo to be added</p>
-  
-    <div class="intro">
-      <h3>
-        “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
-        Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
-        So we built Links for you.”
-      </h3>
-    </div>
-  
-   <section class="features">
+  <p style="text-align: center; color:white;">Links logo to be added</p>
+
+  <div class="intro">
+    <h3>
+      “We created Links because we wished we had a platform like this to guide us when we first started university.<br><br>
+      Be able to meet people like us, from our community, discover new ones, and not feel alone.<br><br>
+      So we built Links for you.”
+    </h3>
+  </div>
+
+  <section class="features">
     <div class="cards">
       <!-- 1) WHAT DO WE OFFER -->
       <article class="card">
         <h2>FOR WHAT</h2>
-        <p style="font-family: 'Amaranth', sans-serif; font-weight: 700; font-style: normal;">We allow university students, whether new or returning, to discover new people and make new connections based on things in common, shared interests, and even shared classes.</p>
+        <p>We allow university students, whether new or returning, to discover new people and make new connections based on things in common, shared interests, and even shared classes.</p>
       </article>
-  
+
       <!-- 2) FOR WHOM -->
       <article class="card">
         <h2>FOR WHOM</h2>
-         <p style="font-family: 'Amaranth', sans-serif; font-weight: 700; font-style: normal;">
-          Our targeted public is mostly the 1st year students<br>
-          But it's designed for all UOttawa students
-
+        <p>
+          Our targeted public is mostly the 1st year students.<br>
+          But it's designed for all UOttawa students.
         </p>
       </article>
-  
+
       <!-- 3) WHAT DO WE PROPOSE -->
       <article class="card">
         <h2>WHAT DO WE PROPOSE</h2>
-        <p style="font-family: 'Amaranth', sans-serif; font-weight: 700;  font-style: normal;">
-          You will get to : 
-          <ul style="font-family: 'Amaranth', sans-serif; font-weight: 700; font-style: normal;">
-            <li>Look up people and get connected to them</li>
-            <li>Chat with your friends </li>
-            <li>Discover communities based on your origin, music taste, favorite activities..., and get in the group discussion</li>
-            <li>Get to know about the upcoming events</li>
-            <li>Get the premium version to have access to more opportunities! </li> 
-          </ul>
-        </p>
+        <p>You will get to:</p>
+        <ul>
+          <li>Look up people and get connected to them</li>
+          <li>Chat with your friends</li>
+          <li>Discover communities based on your origin, music taste, favorite activities..., and get in the group discussion</li>
+          <li>Get to know about the upcoming events</li>
+          <li>Get the premium version to have access to more opportunities!</li>
+        </ul>
       </article>
     </div>
-     <h3>This web site is made by students for students</h3>
+
+    <h3 class="bottom">This web site is made by students for students</h3>
   </section>
-  
-  <style>
-    /* Palette proche de tes screenshots */
-    :root{
-      --bg-orange: #ff5a3c;      /* fond page */
-      --blue: #c9f6ff;           /* bleu clair des blocs / bordures */
-      --text-orange: #ff5a3c;    /* textes dans les blocs */
-    }
-  
-    /* Donne ce fond orange si tu veux transformer toute la page */
-    body { background: var(--bg-orange); margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-  
-    .features { padding: clamp(16px, 4vw, 48px); }
-    .cards {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: clamp(16px, 2.5vw, 28px);
-      grid-template-columns: 1fr;
-    }
-    /* 2 colonnes dès tablette */
-    @media (min-width: 900px){
-      .cards { grid-template-columns: repeat(3, 1fr); }
-    }
-  
-    .card{
-      /* “bordures courbées bleu clair” : on simule un gros liseré bleu grâce à la bordure
-         + on remplit aussi en bleu pour obtenir l’aspect des captures */
-      background: var(--blue);
-      border: 10px solid var(--blue);
-      border-radius: 28px;              /* coins bien arrondis */
-      padding: clamp(18px, 2.2vw, 28px);
-      color: var(--text-orange);
-      box-shadow: 0 6px 0 rgba(0,0,0,0.06);
-    }
-  
-    .card h2{
-      margin: 0 0 10px;
-      font-size: clamp(22px, 2.2vw + 8px, 40px);
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: 0.2px;
-    }
-  
-    .card p{
-      margin: 0;
-      font-size: clamp(15px, 1.1vw + 10px, 18px);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-  </style>
+
 </body>
 </html>
