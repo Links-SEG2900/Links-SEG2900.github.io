@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Links - Pricing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #c1e1c1; /* soft green */
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* ====== HEADER (your provided styles) ====== */
+      header {
+        background-color: #c1e1c1;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+      nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #007bff;
+      }
+      .language-switch {
+        border-left: 1px solid #ccc;
+        padding-left: 20px;
+        margin-left: 15px;
+        font-size: 14px;
+      }
+      .language-switch a {
+        margin: 0 5px;
+        color: #666;
+        text-decoration: none;
+      }
+      .language-switch a:hover {
+        color: #000;
+      }
+      .language-switch a.active {
+        font-weight: 700;
+        color: #000;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        nav {
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 10px;
+        }
+        .language-switch {
+          border-left: none;
+          padding-left: 0;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+
+      /* ====== MAIN / PRICING ====== */
+      main {
+        flex: 1; /* fill space between header and footer */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+      .plan {
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        width: 360px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      }
+      .plan h2 {
+        margin-top: 0;
+        color: #234d38;
+        font-size: 26px;
+      }
+      .price {
+        font-size: 30px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      .features {
+        margin: 20px 0;
+        text-align: left;
+        font-size: 16px;
+      }
+      .features p {
+        margin: 8px 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        background: #234d38;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background 0.3s, transform 0.2s;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .btn:hover {
+        background: #1a3628;
+        transform: scale(1.05);
+      }
+
+      /* ====== FOOTER (your provided styles) ====== */
+      footer {
+        background-color: #c1e1c1;
+        color: #eee;
+        padding: 30px 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      .footer-links {
+        margin-bottom: 15px;
+      }
+      .footer-links a {
+        color: #bbb;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+      }
+      .footer-links a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .footer-bottom {
+        font-size: 13px;
+        color: #888;
+      }
+      @media (max-width: 600px) {
+        .footer-links a {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ====== HEADER (your markup) ====== -->
+    <header>
+      <div class="logo">MonLogo</div>
+      <nav>
+        <a href="#">Caractéristiques</a>
+        <a href="#">À propos de nous</a>
+        <a href="#">Tarifs</a>
+        <div class="language-switch">
+          <a href="#" id="fr-link" class="active">FR</a> |
+          <a href="#" id="en-link">EN</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====== MAIN PRICING ====== -->
+    <main>
+      <div class="pricing-container">
+        <div class="plan" id="planRegular">
+          <h2 id="regularTitle">Regular</h2>
+          <p class="price" id="regularPrice">Free</p>
+          <div class="features" id="regularFeatures">
+            <p>✔ Discover students</p>
+            <p>✔ Join public groups</p>
+          </div>
+          <a href="#" class="btn" id="btnRegularCTA">Get Started</a>
+        </div>
+
+        <div class="plan" id="planPremium">
+          <h2 id="premiumTitle">Premium</h2>
+          <p class="price" id="premiumPrice">$10 / month</p>
+          <div class="features" id="premiumFeatures">
+            <p>✔ Advanced recommendations</p>
+            <p>✔ Priority support</p>
+          </div>
+          <a href="#" class="btn" id="btnPremiumCTA">Upgrade</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====== FOOTER (your markup) ====== -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">Politique et confidentialité</a>
+        <a href="#">Contactez-nous</a>
+        <a href="#">Conditions générales</a>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 MonSite. Tous droits réservés.
+      </div>
+    </footer>
+
+    <!-- ====== JS: Bilingual toggle (FR/EN) with $10 in both languages ====== -->
+    <script>
+      const translations = {
+        en: {
+          regularTitle: "Regular",
+          premiumTitle: "Premium",
+          regularPrice: "Free",
+          premiumPrice: "$10 / month", // keep $ for English
+          regularFeatures: ["✔ Discover students", "✔ Join public groups"],
+          premiumFeatures: ["✔ Advanced recommendations", "✔ Priority support"],
+          btnRegularCTA: "Get Started",
+          btnPremiumCTA: "Upgrade",
+          alertRegular: "You selected the Regular plan!",
+          alertPremium: "Thanks for choosing Premium!",
+        },
+        fr: {
+          regularTitle: "Régulier",
+          premiumTitle: "Premium",
+          regularPrice: "Gratuit",
+          premiumPrice: "$10 / mois", // keep $ for French (as requested)
+          regularFeatures: [
+            "✔ Découvrir des étudiants",
+            "✔ Rejoindre des groupes publics",
+          ],
+          premiumFeatures: [
+            "✔ Recommandations avancées",
+            "✔ Support prioritaire",
+          ],
+          btnRegularCTA: "Commencer",
+          btnPremiumCTA: "Mettre à niveau",
+          alertRegular: "Vous avez choisi l’offre Régulier !",
+          alertPremium: "Merci d’avoir choisi l’offre Premium !",
+        },
+      };
+
+      const frLink = document.getElementById("fr-link");
+      const enLink = document.getElementById("en-link");
+
+      const regularTitle = document.getElementById("regularTitle");
+      const premiumTitle = document.getElementById("premiumTitle");
+      const regularPrice = document.getElementById("regularPrice");
+      const premiumPrice = document.getElementById("premiumPrice");
+      const regularFeatures = document.getElementById("regularFeatures");
+      const premiumFeatures = document.getElementById("premiumFeatures");
+      const btnRegularCTA = document.getElementById("btnRegularCTA");
+      const btnPremiumCTA = document.getElementById("btnPremiumCTA");
+
+      let currentLang = "fr"; // Start in French to match header initial active
+
+      function updateLanguage(lang) {
+        const t = translations[lang];
+        currentLang = lang;
+
+        // toggle active state in header
+        frLink.classList.toggle("active", lang === "fr");
+        enLink.classList.toggle("active", lang === "en");
+
+        // update titles and prices
+        regularTitle.textContent = t.regularTitle;
+        premiumTitle.textContent = t.premiumTitle;
+        regularPrice.textContent = t.regularPrice;
+        premiumPrice.textContent = t.premiumPrice;
+
+        // update features
+        regularFeatures.innerHTML = t.regularFeatures
+          .map((f) => `<p>${f}</p>`)
+          .join("");
+        premiumFeatures.innerHTML = t.premiumFeatures
+          .map((f) => `<p>${f}</p>`)
+          .join("");
+
+        // update CTAs
+        btnRegularCTA.textContent = t.btnRegularCTA;
+        btnPremiumCTA.textContent = t.btnPremiumCTA;
+      }
+
+      // CTA alerts
+      btnRegularCTA.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(translations[currentLang].alertRegular);
+      });
+      btnPremiumCTA.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert(translations[currentLang].alertPremium);
+      });
+
+      // Language switch
+      frLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        updateLanguage("fr");
+      });
+      enLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        updateLanguage("en");
+      });
+
+      // Initialize
+      updateLanguage(currentLang);
+    </script>
+  </body>
+</html>
