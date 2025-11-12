@@ -5,7 +5,7 @@
   <title>Footer Exemple</title>
   <style>
     footer {
-      background-color: #222;
+      background-color: #C1E1C1;
       color: #eee;
       padding: 30px 20px;
       text-align: center;
