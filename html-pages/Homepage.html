@@ -1,103 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links: Home Page</title>
-    <link rel="stylesheet" href="Homepage.css">
-</head>
-<body>
-    <header>
-        <div class="logo">My Logo</div>
-        <nav>
-            <a href="#">Features</a>
-            <a href="#">About Us</a>
-            <div class="language-switch">
-            <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Links: Home Page</title>
+    </head>
+    <style>
+                * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+            font-family: Sedgwick Ave;
+            background-color: #c1e1c1;
+            color: #000;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .language-switch {
+            border-left: 1px solid #ccc;
+            padding-left: 20px;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        .language-switch a {
+            margin: 0 5px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .language-switch a:hover {
+            color: #000;
+        }
+
+        hr {
+        border: none; 
+        height: 2px;
+        background-color: #333; 
+        }
+
+        .box-container {
+        display: flex;
+        justify-content: center;
+        gap: 200px;
+        margin-top: 40px;
+        }
+
+        .menu-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#225f08;
+        border-radius: 15px;
+        width: auto;
+        min-width: 200px;
+        max-width: 250px;
+        height: 140px;
+        padding: 10px;
+        font-size: 20px;
+        font-family: "Sedgwick Ave" ;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: center;
+        white-space: normal;
+        word-wrap: break-word;
+        transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .menu-box:hover {
+        background-color: #1a6b1a;
+        transform: scale(1.05);
+        }
+
+        #box_GS {
+            display: block;
+            padding: 20px 20px;
+            background-color: #71b571;
+            color: black;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: "Sedgwick Ave";
+            cursor: pointer;
+            margin: 40px auto;
+            text-align: center;
+            width: 140px;
+            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        #box_GS:hover {
+            background-color: #73c373;
+            transform: scale(1.08);
+            border-color: gold;
+        }
+
+        footer {
+            background-color: #222;
+            color: #eee;
+            padding: 30px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            font-size: 13px;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            header {
+            flex-direction: column;
+            align-items: flex-start;
+            }
+
+            nav {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            }
+
+            .language-switch {
+            border-left: none;
+            padding-left: 0;
+            margin-left: 0;
+            margin-top: 10px;
+            }
+
+            .footer-links a {
+            display: block;
+            margin: 10px 0;
+            }
+        }
+    </style>
+    <body>
+        <header>
+            <div class="logo-area">
+                <a href = "http://127.0.0.1:5500/Homepage.html">
+                    <img src="logoLinksk.png" alt="Link logo" class="border-left" style="width:80px; height:30px;">
+                </a>
             </div>
-        </nav>
-    </header>
-    <main> 
-        <br>
-        <br>
-        <img src = "https://icon-library.com/images/link-png-icon/link-png-icon-1.jpg" alt="Link Image">
-        <h1 class="img_h1"> Links</h1>
-        <hr>
+            <nav>
+                <a href="http://127.0.0.1:5500/Features.html">Features</a>
+                <a href="http://127.0.0.1:5500/pricingpage.html">Pricing</a>
+                <a href="http://127.0.0.1:5500/teampage.html">Meet Our Team</a>
+                <div class="language-switch">
+                    <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+                </div>
+            </nav>
+        </header>
 
-        <div class="box-container">
-        <a href="http://127.0.0.1:5500/teampage.html" class="menu-box">About Us</a>
-        <a href="http://127.0.0.1:5500/Pricing_page..html" class="menu-box">Pricing Page</a>
-        <a href="http://127.0.0.1:5500/Features_page.html" class="menu-box">Product Features</a>
-        </div>
+        <main> 
             <br>
-            <a href="http://127.0.0.1:5500/log_in_page.html" id="box_GS">Get Started</a>
-    </main>
+            <br>
+            <a href = "http://127.0.0.1:5500/Homepage.html">
+                <img src = "logoLinksk.png" alt="Link logo" class="center-image" style="display:block; margin:auto; width:700px; height:300px;">
+            </a>
+            <br>
+            <hr>
+            <br>
 
-    <footer>
-        <div class="footer-links">
-            <a href="#">Policy & Privacy</a>
-            <a href="#">Contact us</a>
-            <a href="#">General conditions</a>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2025 MySite. All rights reserved.
-        </div>
-    </footer>
-    <script>
-  const translations = {
-    en: {
-      logo: "My Logo",
-      features: "Product Features",
-      about: "About Us",
-      links: "Links",
-      box1: "About Us",
-      box2: "Pricing Page",
-      box3: "Product Features",
-      getStarted: "Get Started",
-      footer1: "Privacy Policy",
-      footer2: "Contact Us",
-      footer3: "Terms and Conditions",
-      footerBottom: "© 2025 MySite. All rights reserved."
-    },
-    fr: {
-      logo: "Mon Logo",
-      features: "Caractéristiques",
-      about: "À propos de nous",
-      links: "Liens",
-      box1: "À propos de nous",
-      box2: "Page de Tarifs",
-      box3: "Caractéristiques du Produit",
-      getStarted: "Commencer",
-      footer1: "Politique et confidentialité",
-      footer2: "Contactez-nous",
-      footer3: "Conditions générales",
-      footerBottom: "© 2025 MonSite. Tous droits réservés."
+            <div class="box-container">
+            <a href="http://127.0.0.1:5500/Features.html" class="menu-box">Features</a>
+            <a href="http://127.0.0.1:5500/pricingpage.html" class="menu-box">Pricing</a>
+            <a href="http://127.0.0.1:5500/teampage.html" class="menu-box">Meet Our Team</a>
+            </div>
+                <br>
+                <a href="http://127.0.0.1:5500/signuppage.html" id="box_GS">Get Started</a>
+        </main>
+
+        <footer>
+            <div class="footer-bottom">
+                &copy; 2025 MySite. All rights reserved.
+            </div>
+        </footer>
+
+        <script>
+    const translations = {
+        en: {
+        logo: "My Logo",
+        features: "Features",
+        pricing: "Pricing",
+        about: "Meet Our Team",
+        box1: "Features",
+        box2: "Pricing",
+        box3: "Meet Our Team",
+        getStarted: "Get Started",
+        footerBottom: "© 2025 MySite. All rights reserved."
+        },
+        fr: {
+        logo: "Mon Logo",
+        features: "Caractéristiques",
+        pricing: "Abonnements",
+        about: "À propos de nous",
+        box1: "Caractéristiques",
+        box2: "Abonnements",
+        box3: "À propos de nous",
+        getStarted: "Commencer",
+        footerBottom: "© 2025 MonSite. Tous droits réservés."
+        }
+    };
+
+    document.getElementById("fr-btn").onclick = function() {
+        translate("fr");
+    };
+
+    document.getElementById("en-btn").onclick = function() {
+        translate("en");
+    };
+
+
+    function translate(lang) {
+        const t = translations[lang];
+        document.querySelector("nav a:nth-child(1)").textContent = t.features;
+        document.querySelector("nav a:nth-child(2)").textContent = t.pricing;
+        document.querySelector("nav a:nth-child(3)").textContent = t.about;
+        const boxes = document.querySelectorAll(".menu-box");
+            boxes[0].textContent = t.box1;
+            boxes[1].textContent = t.box2;
+            boxes[2].textContent = t.box3;
+        document.getElementById("box_GS").textContent = t.getStarted;
+        document.querySelector(".footer-bottom").textContent = t.footerBottom;
     }
-  };
+    </script>
 
-  document.getElementById("fr-btn").onclick = function() {
-    translate("fr");
-  };
+    </body>
 
-  document.getElementById("en-btn").onclick = function() {
-    translate("en");
-  };
-
-  function translate(lang) {
-    const t = translations[lang];
-    document.querySelector(".logo").textContent = t.logo;
-    document.querySelector("nav a:nth-child(1)").textContent = t.features;
-    document.querySelector("nav a:nth-child(2)").textContent = t.about;
-    document.querySelector(".img_h1").textContent = t.links;
-    document.querySelectorAll(".menu-box")[0].textContent = t.box1;
-    document.querySelectorAll(".menu-box")[1].textContent = t.box2;
-    document.querySelectorAll(".menu-box")[2].textContent = t.box3;
-    document.getElementById("box_GS").textContent = t.getStarted;
-    document.querySelector(".footer-links a:nth-child(1)").textContent = t.footer1;
-    document.querySelector(".footer-links a:nth-child(2)").textContent = t.footer2;
-    document.querySelector(".footer-links a:nth-child(3)").textContent = t.footer3;
-    document.querySelector(".footer-bottom").textContent = t.footerBottom;
-  }
-</script>
-</body>
 </html>
