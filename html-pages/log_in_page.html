@@ -146,7 +146,8 @@ input[type="submit"]:hover{
       </div>
 
       <div class="forgot">Forgot Password ?</div>
-      <input type="submit" value="Login">
+      <button id="loginBtn" type="button">Login</button>
+
 
       <div class="users_signup">
         Don't have an account? <a href="#">SignUp</a>
@@ -155,6 +156,11 @@ input[type="submit"]:hover{
   </div>
   <nav>
    <a href=""https://links-seg2900.github.io/html-pages/signuppage.html">
+      <script>
+  document.getElementById("loginBtn").addEventListener("click", function () {
+    window.location.href = "https://links-seg2900.github.io/html-pages/signuppage.html";
+  });
+</script>
 
    </a>
   </nav>
