@@ -12,8 +12,9 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Sedgwick Ave;
       background-color: #c1e1c1;
+      overflow-y: hidden;
     }
 
     header {
@@ -130,14 +131,17 @@
     margin: 20px 0;
     }
 
-    .profile-box-top {
-        display: inline-block;
-        text-align: center;
-        margin: 50px;
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      padding: 20px;
     }
 
-    .profile-box-top p {
-    font-size: 24px;
+    .profile-box-top {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .pb {
@@ -189,72 +193,71 @@
 
     <div class="pageinfo">
         <div class="teamheader" id="Header">Meet the Team!</div>
+        
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb1link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+
+        
+        <div class="profile-grid">
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb1link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb1name">Azer Adam</p>
+                <p id="pb1title">Co-Founder</p>
             </div>
-            <p id="pb1name">Azer Adam</p>
-            <p id="pb1title">Co-Founder</p>
-        </div>
 
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb2link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb2link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb2name">Ines Bouchama</p>
+                <p id="pb2title">Co-Founder</p>
             </div>
-            <p id="pb2name">Ines Bouchama</p>
-            <p id="pb2title">Co-Founder</p>
-        </div>
 
-
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb3link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb3link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb3name">Laurien Michel Muhire</p>
+                <p id="pb3title">Co-Founder</p>
             </div>
-            <p id="pb3name">Laurien Michel Muhire</p>
-            <p id="pb3title">Co-Founder</p>
-        </div>
 
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb4link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb4link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb4name">Elizabeth Odebowale</p>
+                <p id="pb4title">Co-Founder</p>
             </div>
-            <p id="pb4name">Elizabeth Odebowale</p>
-            <p id="pb4title">Co-Founder</p>
-        </div>
 
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb5link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb5link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb5name">James Rousseau</p>
+                <p id="pb5title">Co-Founder</p>
             </div>
-            <p id="pb5name">James Rousseau</p>
-            <p id="pb5title">Co-Founder</p>
-        </div>
 
-        <div class="profile-box-top">
-            <div class="pb">
-                <a href="http://google.com" id="pb6link">
-                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
-                </a>
+            <div class="profile-box-top">
+                <div class="pb">
+                    <a href="http://google.com" id="pb6link">
+                     <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/generic_user.png">
+                    </a>
+                </div>
+                <p id="pb6name">Pierre Teyou Gaiss</p>
+                <p id="pb6title">Co-Founder</p>
             </div>
-            <p id="pb6name">Pierre Teyou Gaiss</p>
-            <p id="pb6title">Co-Founder</p>
         </div>
-
   
     </div>
   <footer>
