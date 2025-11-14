@@ -21,70 +21,6 @@
       }
 
       /* ====== HEADER (your provided styles) ====== */
-      header {
-        background-color: #c1e1c1;
-        border-bottom: 1px solid #ddd;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #333;
-      }
-      nav {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-      }
-      nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-      nav a:hover {
-        color: #007bff;
-      }
-      .language-switch {
-        border-left: 1px solid #ccc;
-        padding-left: 20px;
-        margin-left: 15px;
-        font-size: 14px;
-      }
-      .language-switch a {
-        margin: 0 5px;
-        color: #666;
-        text-decoration: none;
-      }
-      .language-switch a:hover {
-        color: #000;
-      }
-      .language-switch a.active {
-        font-weight: 700;
-        color: #000;
-        text-decoration: underline;
-      }
-
-      @media (max-width: 600px) {
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        nav {
-          flex-direction: column;
-          gap: 10px;
-          margin-top: 10px;
-        }
-        .language-switch {
-          border-left: none;
-          padding-left: 0;
-          margin-left: 0;
-          margin-top: 10px;
-        }
-      }
 
       /* ====== MAIN / PRICING ====== */
       main {
@@ -144,52 +80,144 @@
       }
 
       /* ====== FOOTER (your provided styles) ====== */
-      footer {
-        background-color: #c1e1c1;
-        color: #eee;
-        padding: 30px 20px;
-        text-align: center;
-        font-family: Arial, sans-serif;
+      *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Sedgwick Ave;
+      background-color: #c1e1c1;
+      overflow-y: auto;
+    }
+
+    header {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #c1e1c1;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007BFF;
+    }
+
+    .language-switch {
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .language-switch a {
+      margin: 0 5px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .language-switch a:hover {
+      color: #000;
+    }
+
+     footer {
+      background-color: #222;
+      color: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
       }
-      .footer-links {
-        margin-bottom: 15px;
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
       }
+
+      .language-switch {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
       .footer-links a {
-        color: #bbb;
-        text-decoration: none;
-        margin: 0 15px;
-        font-size: 14px;
+        display: block;
+        margin: 10px 0;
       }
-      .footer-links a:hover {
-        color: #fff;
-        text-decoration: underline;
-      }
-      .footer-bottom {
-        font-size: 13px;
-        color: #888;
-      }
-      @media (max-width: 600px) {
-        .footer-links a {
-          display: block;
-          margin: 10px 0;
-        }
-      }
+    }
+
+    .updatedheader img{
+        height: 30px;
+        width: 100px;
+    }
     </style>
   </head>
   <body>
     <!-- ====== HEADER (your markup) ====== -->
     <header>
-      <div class="logo">MonLogo</div>
-      <nav>
-        <a href="#">Caractéristiques</a>
-        <a href="#">À propos de nous</a>
-        <a href="#">Tarifs</a>
-        <div class="language-switch">
-          <a href="#" id="fr-link" class="active">FR</a> |
-          <a href="#" id="en-link">EN</a>
-        </div>
-      </nav>
-    </header>
+            <div class="updatedheader">
+                <a href="https://links-seg2900.github.io/html-pages/Homepage.html" id="headerLink">
+                 <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
+                </a>
+            </div>
+            <nav>
+                <a href="https://links-seg2900.github.io/html-pages/Features_page.html" id="header_features">Features</a>
+      <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html" id="header_pricing">Pricing</a>
+      <a href="https://links-seg2900.github.io/html-pages/teampage.html" id="header_meetourteam">Meet Our Team</a>
+                <div class="language-switch">
+                    <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+                </div>
+            </nav>
+        </header>
 
     <!-- ====== MAIN PRICING ====== -->
     <main>
@@ -198,8 +226,8 @@
           <h2 id="regularTitle">Regular</h2>
           <p class="price" id="regularPrice">Free</p>
           <div class="features" id="regularFeatures">
-            <p>✔ Discover students</p>
-            <p>✔ Join public groups</p>
+            <p id="regularFeatures1">✔ Discover students</p>
+            <p id="regularFeatures2">✔ Join public groups</p>
           </div>
           <a href="#" class="btn" id="btnRegularCTA">Get Started</a>
         </div>
@@ -208,8 +236,8 @@
           <h2 id="premiumTitle">Premium</h2>
           <p class="price" id="premiumPrice">$10 / month</p>
           <div class="features" id="premiumFeatures">
-            <p>✔ Advanced recommendations</p>
-            <p>✔ Priority support</p>
+            <p id="premiumFeatures1">✔ Advanced recommendations</p>
+            <p id="premiumFeatures2">✔ Priority support</p>
           </div>
           <a href="#" class="btn" id="btnPremiumCTA">Upgrade</a>
         </div>
@@ -217,16 +245,13 @@
     </main>
 
     <!-- ====== FOOTER (your markup) ====== -->
-    <footer>
-      <div class="footer-links">
-        <a href="#">Politique et confidentialité</a>
-        <a href="#">Contactez-nous</a>
-        <a href="#">Conditions générales</a>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2025 MonSite. Tous droits réservés.
-      </div>
-    </footer>
+     <footer>
+    <div class="footer-links">
+    </div>
+    <div class="footer-bottom", id="footertext">
+      &copy; Links 2025. All Rights Reserved.
+    </div>
+  </footer>
 
     <!-- ====== JS: Bilingual toggle (FR/EN) with $10 in both languages ====== -->
     <script>
@@ -236,96 +261,66 @@
           premiumTitle: "Premium",
           regularPrice: "Free",
           premiumPrice: "$10 / month", // keep $ for English
-          regularFeatures: ["✔ Discover students", "✔ Join public groups"],
-          premiumFeatures: ["✔ Advanced recommendations", "✔ Priority support"],
+          regularFeatures1: "✔ Discover students",
+          regularFeatures2: "✔ Join public groups",
+          premiumFeatures1: "✔ Advanced recommendations",
+          premiumFeatures2: "✔ Priority support",
           btnRegularCTA: "Get Started",
           btnPremiumCTA: "Upgrade",
           alertRegular: "You selected the Regular plan!",
           alertPremium: "Thanks for choosing Premium!",
+          features_header: "Features",
+          features_pricing: "Pricing",
+          features_team: "Meet our Team",
+          footer_text: "© Links 2025. All Rights Reserved."
         },
         fr: {
           regularTitle: "Régulier",
           premiumTitle: "Premium",
           regularPrice: "Gratuit",
           premiumPrice: "$10 / mois", // keep $ for French (as requested)
-          regularFeatures: [
-            "✔ Découvrir des étudiants",
-            "✔ Rejoindre des groupes publics",
-          ],
-          premiumFeatures: [
-            "✔ Recommandations avancées",
-            "✔ Support prioritaire",
-          ],
+          regularFeatures1: "✔ Découvrir des étudiants",
+          regularFeatures2: "✔ Rejoindre des groupes publics",
+          premiumFeatures1: "✔ Recommandations avancées",
+          premiumFeatures2: "✔ Support prioritaire",
           btnRegularCTA: "Commencer",
           btnPremiumCTA: "Mettre à niveau",
           alertRegular: "Vous avez choisi l’offre Régulier !",
           alertPremium: "Merci d’avoir choisi l’offre Premium !",
+          features_header: "Caractéristiques",
+          features_pricing: "Abonnements",
+          features_team: "À propos de nous",
+          footer_text: "© 2025 Links. Tous droits réservés."
         },
       };
 
-      const frLink = document.getElementById("fr-link");
-      const enLink = document.getElementById("en-link");
+  document.getElementById("fr-btn").onclick = function() {
+    translate("fr");
+  };
 
-      const regularTitle = document.getElementById("regularTitle");
-      const premiumTitle = document.getElementById("premiumTitle");
-      const regularPrice = document.getElementById("regularPrice");
-      const premiumPrice = document.getElementById("premiumPrice");
-      const regularFeatures = document.getElementById("regularFeatures");
-      const premiumFeatures = document.getElementById("premiumFeatures");
-      const btnRegularCTA = document.getElementById("btnRegularCTA");
-      const btnPremiumCTA = document.getElementById("btnPremiumCTA");
+  document.getElementById("en-btn").onclick = function() {
+    translate("en");
+  };
 
-      let currentLang = "fr"; // Start in French to match header initial active
+  function translate(lang) {
+    const t = translations[lang];
+    document.getElementById("header_features").textContent = t.features_header;
+    document.getElementById("header_pricing").textContent = t.features_pricing;
+    document.getElementById("header_meetourteam").textContent = t.features_team;
+    document.getElementById("footertext").textContent = t.footer_text;
+    document.getElementById("regularTitle").textContent = t.regularTitle;
+    document.getElementById("premiumTitle").textContent = t.premiumTitle;
+    document.getElementById("regularPrice").textContent = t.regularPrice;
+    document.getElementById("premiumPrice").textContent = t.premiumPrice;
+    document.getElementById("regularFeatures1").textContent = t.regularFeatures1;
+    document.getElementById("premiumFeatures1").textContent = t.premiumFeatures1;
+    document.getElementById("regularFeatures2").textContent = t.regularFeatures2;
+    document.getElementById("premiumFeatures2").textContent = t.premiumFeatures2;
+    document.getElementById("btnRegularCTA").textContent = t.btnRegularCTA;
+    document.getElementById("btnPremiumCTA").textContent = t.btnPremiumCTA;
+  }
 
-      function updateLanguage(lang) {
-        const t = translations[lang];
-        currentLang = lang;
-
-        // toggle active state in header
-        frLink.classList.toggle("active", lang === "fr");
-        enLink.classList.toggle("active", lang === "en");
-
-        // update titles and prices
-        regularTitle.textContent = t.regularTitle;
-        premiumTitle.textContent = t.premiumTitle;
-        regularPrice.textContent = t.regularPrice;
-        premiumPrice.textContent = t.premiumPrice;
-
-        // update features
-        regularFeatures.innerHTML = t.regularFeatures
-          .map((f) => `<p>${f}</p>`)
-          .join("");
-        premiumFeatures.innerHTML = t.premiumFeatures
-          .map((f) => `<p>${f}</p>`)
-          .join("");
-
-        // update CTAs
-        btnRegularCTA.textContent = t.btnRegularCTA;
-        btnPremiumCTA.textContent = t.btnPremiumCTA;
-      }
-
-      // CTA alerts
-      btnRegularCTA.addEventListener("click", (e) => {
-        e.preventDefault();
-        alert(translations[currentLang].alertRegular);
-      });
-      btnPremiumCTA.addEventListener("click", (e) => {
-        e.preventDefault();
-        alert(translations[currentLang].alertPremium);
-      });
-
-      // Language switch
-      frLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        updateLanguage("fr");
-      });
-      enLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        updateLanguage("en");
-      });
-
-      // Initialize
-      updateLanguage(currentLang);
+  </script>
     </script>
   </body>
 </html>
