@@ -21,7 +21,51 @@
 
         }
 
+        header {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;  
+        }
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;   
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .language-switch {
+            border-left: 1px solid #ccc;
+            padding-left: 20px; 
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        .language-switch a {
+            margin: 0 5px;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .language-switch a:hover {
+            color: #000;
+        }
+
+        
         html,
         body {
             box-sizing: border-box;
@@ -205,20 +249,12 @@
 
         }
 
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
         footer {
             background-color: #C1E1C1;
             color: #eee;
             padding: 30px 20px;
             text-align: center;
             font-family: Arial, sans-serif;
-            margin-top: 160px;
         }
 
         .footer-links {
@@ -254,15 +290,28 @@
 
 <body>
     <!--Header-->
-    <header>
-        <nav id="navbar">
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/Homepage.html" id="home">Home</a>
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/User_Page.html" id="user">User</a>
-            <a class="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html" id="price">Pricing</a>
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/teampage.html" id="about">About</a>
-            <button id="translate">French</button>
-        </nav>
-    </header>
+<header>
+    <div class="logo-area">
+        <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
+            <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png"
+                 alt="Link logo" style="width:80px; height:30px;">
+        </a>
+    </div>
+
+    <nav>
+        <a href="https://links-seg2900.github.io/html-pages/Homepage.html">Home</a>
+        <a href="https://links-seg2900.github.io/html-pages/User_Page.html">User</a>
+        
+        <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
+
+        <a href="https://links-seg2900.github.io/html-pages/teampage.html">About</a>
+
+        <div class="language-switch">
+            <a href="#" id="fr-btn">FR</a> |
+            <a href="#" id="en-btn">EN</a>
+        </div>
+    </nav>
+</header>
     <main>
         <section id="user-side">
             <!--Each user-->
@@ -326,6 +375,7 @@
 
 
     </main>
+    <br>
     <footer>
         <div class="footer-links">
             <a href="#">Politique et confidentialité</a>
@@ -337,102 +387,6 @@
         </div>
     </footer>
 </body>
-<script src="script_chat.js">
-    //Translate Button
-    const transl = document.getElementById("translate");
-    //Navlink button
-    const user_nav = document.getElementById("user");
-    const price = document.getElementById("price");
-    const about = document.getElementById("about");
-    const title = document.querySelector(".title");
-    //Contacts for users
-    const users = document.querySelectorAll(".user");
-
-    //Receiver info
-    const receiver_Image = document.querySelector("[data-receiver]");
-    const receiver_Name = document.querySelector(".username_receiver");
-
-    //Submit button
-    const submit_btn = document.getElementById("send_button");
-    //Input placeholder
-    const text_input = document.querySelector(".text_input");
-
-
-    //Stylling translate button
-    transl.style.backgroundColor = "black";
-    transl.style.color = "white";
-    transl.style.padding = "7px 10px";
-    transl.style.border = "2px solid white";
-    transl.style.borderRadius = "10px";
-
-
-
-    //Translation button function
-    transl.addEventListener("click", () => {
-        const cur = transl.textContent.trim().toLowerCase();
-        transl.textContent = cur.includes('english') ? 'French' : 'English';
-        if (transl.textContent == "English") {
-            user_nav.textContent = "Utillisateur";
-            price.textContent = "Prix";
-            about.textContent = "A propos";
-            title.textContent = "Tes Links";
-            title.style.fontStyle = "italic";
-            submit_btn.textContent = "Envoyer";
-            text_input.placeholder = "Tapez votre message ici...";
-        }
-        else {
-            users.textContent = "User";
-            price.textContent = "Price";
-            about.textContent = "About";
-            title.textContent = "Your Links";
-            submit_btn.textContent = "Send";
-            text_input.placeholder = "Type your message here...";
-        }
-
-
-    });
-    //Hover
-    transl.addEventListener("mouseenter", () => {
-        transl.style.backgroundColor = "white";
-        transl.style.color = "black";
-        transl.style.cursor = "pointer";
-        transl.style.border = "2px solid white";
-        transl.style.padding = "16px";
-    });
-    transl.addEventListener("mouseleave", () => {
-        transl.style.backgroundColor = "black";
-        transl.style.color = "white";
-        transl.style.border = "2px solid white";
-        transl.style.padding = "7px 10px";
-    });
-
-    //User selection
-    users.forEach(user => {
-        user.addEventListener("click", () => {
-            const img = user.querySelector(".user-profile-picture").src;
-            const name = user.querySelector(".username").textContent;
-
-            receiver_Image.src = img;
-            receiver_Name.textContent = name;
-        })
-    });
-
-
-
-
-
-
-    //Input field stylying
-    const text_input_container = document.getElementById("text_input_container");
-    text_input_container.style.display = "flex";
-    text_input_container.style.justifyContent = "center";
-    text_input_container.style.alignItems = "center";
-    text_input_container.style.flexDirection = "column";
-    text_input_container.style.margin = "auto";
-
-
-
-
-</script>
+<script src="script_chat.js"> </script>
 
 </html>
