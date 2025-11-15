@@ -13,241 +13,241 @@
         rel="stylesheet">
     <style>
         * {
-    font-family: Sedgwick Ave;
-    --pastel-green: #C1E1C1;
-    --dark: black;
-    --text-color: Gold;
-    --simplistic: white;
+            font-family: Sedgwick Ave;
+            --pastel-green: #C1E1C1;
+            --dark: black;
+            --text-color: Gold;
+            --simplistic: white;
 
-}
-
-
-html,
-body {
-    box-sizing: border-box;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-#navbar {
-    display: flex;
-    width: 100vw;
-    height: 55px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--dark);
-    position: sticky;
-    top: 0;
-    left: 0;
-    border-bottom: 5px solid white;
-}
-
-.nav-links {
-    color: var(--simplistic);
-    display: flex;
-    justify-content: space-evenly;
-    width: 150px;
-    text-decoration: none;
-    position: relative;
-    font-size: 20px;
-    border: 2px solid var(--simplistic);
-    padding: 3px 8px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.nav-links:hover {
-    background-color: var(--simplistic);
-    color: var(--dark);
-    cursor: pointer;
-    border: 2px solid var(--dark);
-    padding: 10px;
-}
-
-.user-profile-picture {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    position: relative;
-    left: 20px;
-    align-self: center;
-    top: 20px;
-
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#user-side>* {
-    display: grid;
-    width: 40vw;
-    height: 10vh;
-    border: 1px solid var(--dark);
-    grid-column: 1;
-    position: relative;
-    left: -8px;
-}
-
-#messaging-side>* {
-    display: grid;
-    grid-column: 2;
-    width: 64vw;
-
-}
-
-.user {
-    height: 10px;
-}
-
-.user:hover {
-    background-color: var(--pastel-green);
-    color: var(--simplistic);
-}
-
-.username {
-    color: var(--dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -25px;
-    font-size: 18px;
-
-}
-
-.username:hover {
-    color: var(--simplistic);
-    cursor: pointer;
-}
-
-.phone-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-    top: -70px;
-    left: 80%;
-}
-
-.phone-logo:hover {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    top: -80px;
-    cursor: pointer;
-}
-
-.user_message_receiver_info {
-    display: inline-block;
-    border-bottom: 1px solid var(--dark);
-    width: 100vh;
-    height: 80px;
+        }
 
 
-}
+        html,
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            overflow-x: hidden;
+        }
 
-.username_receiver {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    align-self: center;
-    position: relative;
-    top: -20px;
-    font-weight: bold;
-}
+        #navbar {
+            display: flex;
+            width: 100vw;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--dark);
+            position: sticky;
+            top: 0;
+            left: 0;
+            border-bottom: 5px solid white;
+        }
 
-.message_input {
+        .nav-links {
+            color: var(--simplistic);
+            display: flex;
+            justify-content: space-evenly;
+            width: 150px;
+            text-decoration: none;
+            position: relative;
+            font-size: 20px;
+            border: 2px solid var(--simplistic);
+            padding: 3px 8px;
+            margin: 10px;
+            border-radius: 10px;
+        }
 
-    border-radius: 10px;
-}
+        .nav-links:hover {
+            background-color: var(--simplistic);
+            color: var(--dark);
+            cursor: pointer;
+            border: 2px solid var(--dark);
+            padding: 10px;
+        }
 
-.text_input {
-    padding: 10px 285px;
-    border: 2px solid var(--dark);
-    border-radius: 10px;
-}
+        .user-profile-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            position: relative;
+            left: 20px;
+            align-self: center;
+            top: 20px;
+
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #user-side>* {
+            display: grid;
+            width: 40vw;
+            height: 13vh;
+            border: 1px solid var(--dark);
+            grid-column: 1;
+            position: relative;
+            left: -8px;
+        }
+
+        #messaging-side>* {
+            display: grid;
+            grid-column: 2;
+            width: 64vw;
+
+        }
+
+        .user {
+            height: 10px;
+        }
+
+        .user:hover {
+            background-color: var(--pastel-green);
+            color: var(--simplistic);
+        }
+
+        .username {
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: -25px;
+            font-size: 18px;
+
+        }
+
+        .username:hover {
+            color: var(--simplistic);
+            cursor: pointer;
+        }
+
+        .phone-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            position: relative;
+            justify-content: flex-end;
+            top: -70px;
+            left: 80%;
+        }
+
+        .phone-logo:hover {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            top: -80px;
+            cursor: pointer;
+        }
+
+        .user_message_receiver_info {
+            display: inline-block;
+            border-bottom: 1px solid var(--dark);
+            width: 100vh;
+            height: 80px;
 
 
-#text_input_container {
-    position: absolute;
-    top: 500px;
-    display: flex;
-    justify-content: center;
-    left: 540px;
+        }
 
-}
+        .username_receiver {
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            align-self: center;
+            position: relative;
+            top: -20px;
+            font-weight: bold;
+        }
 
-#send_button {
-    border-radius: 10px;
-    background-color: var(--pastel-green);
-    color: var(--dark);
-    padding: 10px 15px;
-    border: 2px solid var(--dark);
-    font-weight: bold;
-}
+        .message_input {
 
-#send_button:hover {
-    padding: 15px 15px;
-    cursor: pointer;
-    background-color: var(--black);
-    color: var(--white);
-}
+            border-radius: 10px;
+        }
 
-.column-title {
-    background-color: var(--dark);
-    color: var(--pastel-green);
-    text-align: center;
+        .text_input {
+            padding: 10px 275px;
+            border: 2px solid var(--dark);
+            border-radius: 10px;
+        }
 
-}
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
+        #text_input_container {
+            position: absolute;
+            top: 700px;
+            display: flex;
+            justify-content: center;
+            left: 540px;
 
-footer {
-    background-color: #C1E1C1;
-    color: #eee;
-    padding: 30px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin-top: 160px;
-}
+        }
 
-.footer-links {
-    margin-bottom: 15px;
-}
+        #send_button {
+            border-radius: 10px;
+            background-color: var(--pastel-green);
+            color: var(--dark);
+            padding: 10px 15px;
+            border: 2px solid var(--dark);
+            font-weight: bold;
+        }
 
-.footer-links a {
-    color: #bbb;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
-}
+        #send_button:hover {
+            padding: 15px 15px;
+            cursor: pointer;
+            background-color: var(--black);
+            color: var(--white);
+        }
 
-.footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
+        .column-title {
+            background-color: var(--dark);
+            color: var(--pastel-green);
+            text-align: center;
 
-.footer-bottom {
-    font-size: 13px;
-    color: #888;
-}
+        }
 
-@media (max-width: 600px) {
-    .footer-links a {
-        display: block;
-        margin: 10px 0;
-    }
-}
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        footer {
+            background-color: #C1E1C1;
+            color: #eee;
+            padding: 30px 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 160px;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            font-size: 13px;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
     </style>
 
 </head>
@@ -315,10 +315,9 @@ footer {
 
             <div id="text_input_container">
                 <form class="message_input">
-                    <input class="text_input" type="text" placeholder="Type your message here..." />
+                    <input cols="50" class="text_input" type="text" placeholder="Type your message here..." />
                     <button id="send_button" type="submit">Send</button>
                 </form>
-                <div id="virtual_keyboard"></div>
 
             </div>
 
@@ -340,138 +339,96 @@ footer {
 </body>
 <script src="script_chat.js">
     //Translate Button
-const transl = document.getElementById("translate");
-//Navlink button
-const user_nav = document.getElementById("user");
-const price = document.getElementById("price");
-const about = document.getElementById("about");
-const title = document.querySelector(".title");
-//Contacts for users
-const users = document.querySelectorAll(".user");
+    const transl = document.getElementById("translate");
+    //Navlink button
+    const user_nav = document.getElementById("user");
+    const price = document.getElementById("price");
+    const about = document.getElementById("about");
+    const title = document.querySelector(".title");
+    //Contacts for users
+    const users = document.querySelectorAll(".user");
 
-//Receiver info
-const receiver_Image = document.querySelector("[data-receiver]");
-const receiver_Name = document.querySelector(".username_receiver");
+    //Receiver info
+    const receiver_Image = document.querySelector("[data-receiver]");
+    const receiver_Name = document.querySelector(".username_receiver");
 
-//Submit button
-const submit_btn = document.getElementById("send_button");
-//Input placeholder
-const text_input = document.querySelector(".text_input");
-
-//Virtual Keyboard container
-const keyboard = document.getElementById("virtual_keyboard");
-
-//Stylling translate button
-transl.style.backgroundColor = "black";
-transl.style.color = "white";
-transl.style.padding = "7px 10px";
-transl.style.border = "2px solid white";
-transl.style.borderRadius = "10px";
+    //Submit button
+    const submit_btn = document.getElementById("send_button");
+    //Input placeholder
+    const text_input = document.querySelector(".text_input");
 
 
-
-//Translation button function
-transl.addEventListener("click", () => {
-    const cur = transl.textContent.trim().toLowerCase();
-    transl.textContent = cur.includes('english') ? 'French' : 'English';
-    if (transl.textContent == "English") {
-        user_nav.textContent = "Utillisateur";
-        price.textContent = "Prix";
-        about.textContent = "A propos";
-        title.textContent = "Tes Links";
-        title.style.fontStyle = "italic";
-        submit_btn.textContent = "Envoyer";
-        text_input.placeholder = "Tapez votre message ici...";
-    }
-    else {
-        users.textContent = "User";
-        price.textContent = "Price";
-        about.textContent = "About";
-        title.textContent = "Your Links";
-        submit_btn.textContent = "Send";
-        text_input.placeholder = "Type your message here...";
-    }
-
-
-});
-//Hover
-transl.addEventListener("mouseenter", () => {
-    transl.style.backgroundColor = "white";
-    transl.style.color = "black";
-    transl.style.cursor = "pointer";
-    transl.style.border = "2px solid white";
-    transl.style.padding = "16px";
-});
-transl.addEventListener("mouseleave", () => {
+    //Stylling translate button
     transl.style.backgroundColor = "black";
     transl.style.color = "white";
-    transl.style.border = "2px solid white";
     transl.style.padding = "7px 10px";
-});
-
-//User selection
-users.forEach(user => {
-    user.addEventListener("click", () => {
-        const img = user.querySelector(".user-profile-picture").src;
-        const name = user.querySelector(".username").textContent;
-
-        receiver_Image.src = img;
-        receiver_Name.textContent = name;
-    })
-});
-
-const keys = [
-    "`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "Backspace",
-    "Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\",
-    "Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "Enter",
-    "Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift",
-    "Ctrl", "Fn", "Windows", "Alt", "Space", "Alt", "Menu", "Ctrl",
-    "Left", "Up", "Down", "Right"
-];
-
-// Create virtual keyboard
-keys.forEach(key => {
-    //Creates button
-    const keyElement = document.createElement("button");
-    //Adds button text of what the key is
-    keyElement.textContent = key;
-    //Adds class to each key
-    keyElement.classList.add("key_element");
-    //Appends each key to the keyboard container
-    keyboard.append(keyElement);
-    keyElement.style.backgroundColor = "black";
-    keyElement.style.color = "white";
-    keyElement.style.margin = "3px";
-    keyElement.style.padding = "8px";
+    transl.style.border = "2px solid white";
+    transl.style.borderRadius = "10px";
 
 
-    keyElement.addEventListener("click", () => {
-        if (key === "Backspace") {
-            text_input.value = text_input.value.slice(0, 1)
+
+    //Translation button function
+    transl.addEventListener("click", () => {
+        const cur = transl.textContent.trim().toLowerCase();
+        transl.textContent = cur.includes('english') ? 'French' : 'English';
+        if (transl.textContent == "English") {
+            user_nav.textContent = "Utillisateur";
+            price.textContent = "Prix";
+            about.textContent = "A propos";
+            title.textContent = "Tes Links";
+            title.style.fontStyle = "italic";
+            submit_btn.textContent = "Envoyer";
+            text_input.placeholder = "Tapez votre message ici...";
         }
-        //if (key ==)
+        else {
+            users.textContent = "User";
+            price.textContent = "Price";
+            about.textContent = "About";
+            title.textContent = "Your Links";
+            submit_btn.textContent = "Send";
+            text_input.placeholder = "Type your message here...";
+        }
+
+
+    });
+    //Hover
+    transl.addEventListener("mouseenter", () => {
+        transl.style.backgroundColor = "white";
+        transl.style.color = "black";
+        transl.style.cursor = "pointer";
+        transl.style.border = "2px solid white";
+        transl.style.padding = "16px";
+    });
+    transl.addEventListener("mouseleave", () => {
+        transl.style.backgroundColor = "black";
+        transl.style.color = "white";
+        transl.style.border = "2px solid white";
+        transl.style.padding = "7px 10px";
+    });
+
+    //User selection
+    users.forEach(user => {
+        user.addEventListener("click", () => {
+            const img = user.querySelector(".user-profile-picture").src;
+            const name = user.querySelector(".username").textContent;
+
+            receiver_Image.src = img;
+            receiver_Name.textContent = name;
+        })
     });
 
 
 
 
-});
 
 
-//Keyboard styling
-keyboard.style.display = "grid";
-keyboard.style.gridTemplateColumns = "repeat(16, auto)";
-keyboard.style.gridTemplateRows = "auto";
-keyboard.style.justifyContent = "center";
-keyboard.style.marginTop = "10px";
-keyboard.style.flexDirection = "column";
-//Input field stylying
-const text_input_container = document.getElementById("text_input_container");
-text_input_container.style.display = "flex";
-text_input_container.style.justifyContent = "center";
-text_input_container.style.alignItems = "center";
-text_input_container.style.flexDirection = "column";
-text_input_container.style.margin = "auto";
+    //Input field stylying
+    const text_input_container = document.getElementById("text_input_container");
+    text_input_container.style.display = "flex";
+    text_input_container.style.justifyContent = "center";
+    text_input_container.style.alignItems = "center";
+    text_input_container.style.flexDirection = "column";
+    text_input_container.style.margin = "auto";
 
 
 
