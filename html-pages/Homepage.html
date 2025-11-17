@@ -150,43 +150,80 @@
 
 <body>
 
-<header>
-    <div class="updatedheader">
-        <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
-            <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
-        </a>
-    </div>
-
-    <nav>
-        <a href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
-        <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
-        <a href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
-        <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
-    </nav>
-</header>
-
-<main>
-    <br><br>
-
-    <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
-        <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png"
-        style="display:block; margin:auto; width:700px; height:300px;">
-    </a>
-
-    <hr>
-
-    <div class="box-container">
-        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
-        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
-        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
-    </div>
-
-    <a href="https://links-seg2900.github.io/html-pages/log_in_page.html" id="box_GS">Get Started</a>
-</main>
-
-<footer>
-    © Links 2025. All Rights Reserved.
-</footer>
-
-</body>
+        <header>
+            <div class="updatedheader">
+                <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
+                    <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
+                </a>
+            </div>
+        
+            <nav>
+                <a href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
+                <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
+                <a href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
+                <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+            </nav>
+        </header>
+        
+        <main>
+            <br><br>
+        
+            <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
+                <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png"
+                style="display:block; margin:auto; width:700px; height:300px;">
+            </a>
+        
+            <hr>
+        
+            <div class="box-container">
+                <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
+                <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
+                <a class="menu-box" href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
+            </div>
+        
+            <a href="https://links-seg2900.github.io/html-pages/log_in_page.html" id="box_GS">Get Started</a>
+        </main>
+        
+        <footer>
+            © Links 2025. All Rights Reserved.
+        </footer>
+        <script>
+            const translations = {
+                en: {
+                    features: "Features",
+                    pricing: "Pricing",
+                    about: "Meet Our Team",
+                    box1: "Features",
+                    box2: "Pricing",
+                    box3: "Meet Our Team",
+                    getStarted: "Get Started",
+                    footerBottom: "© 2025 Links. All Rights Reserved."
+                },
+                fr: {
+                    features: "Caractéristiques",
+                    pricing: "Abonnements",
+                    about: "À propos de nous",
+                    box1: "Caractéristiques",
+                    box2: "Abonnements",
+                    box3: "À propos de nous",
+                    getStarted: "Commencer",
+                    footerBottom: "© 2025 Links. Tous droits réservés."
+                }
+            };
+            document.getElementById("fr-btn").onclick = () => translate("fr");
+            document.getElementById("en-btn").onclick = () => translate("en");
+            function translate(lang) {
+                const t = translations[lang];
+                document.querySelector("nav a:nth-child(1)").textContent = t.features;
+                document.querySelector("nav a:nth-child(2)").textContent = t.pricing;
+                document.querySelector("nav a:nth-child(3)").textContent = t.about;
+                const boxes = document.querySelectorAll(".menu-box");
+                boxes[0].textContent = t.box1;
+                boxes[1].textContent = t.box2;
+                boxes[2].textContent = t.box3;
+                document.getElementById("box_GS").textContent = t.getStarted;
+                document.getElementById("footer-text").textContent = t.footerBottom;
+            }
+        </script>
+    </body>
 </html>
