@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links: Home Page</title>
 
-    <!-- IMPORT DE LA VRAIE POLICE -->
+    <!-- 🔥 IMPORT DE LA BONNE POLICE -->
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-       
+        /* 🔥 LA POLICE ICI S’APPLIQUE A TOUTE LA PAGE */
         body {
             font-family: "Sedgwick Ave Display", cursive;
             font-weight: 400;
             font-style: normal;
             background-color: #C1E1C1;
             color: black;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -42,36 +45,26 @@
         nav a {
             text-decoration: none;
             color: black;
-            font-size: 20px;
-            transition: 0.3s;
+            font-weight: 500;
+            transition: 0.3s ease;
+            font-size: 22px;
         }
 
         nav a:hover {
             color: #007BFF;
         }
 
-        .language-switch {
-            border-left: 1px solid #ccc;
-            padding-left: 20px;
-            margin-left: 15px;
-            font-size: 18px;
-        }
-
-        .language-switch a {
-            text-decoration: none;
-            color: black;
-        }
-
         hr {
             border: none;
             height: 2px;
             background-color: #333;
+            margin: 20px 0;
         }
 
         .box-container {
             display: flex;
             justify-content: center;
-            gap: 200px;
+            gap: 150px;
             margin-top: 40px;
         }
 
@@ -81,19 +74,15 @@
             justify-content: center;
             background-color: #225f08;
             border-radius: 15px;
-            width: auto;
             min-width: 200px;
             max-width: 250px;
             height: 140px;
             padding: 10px;
-            font-size: 24px;
+            font-size: 26px;
             color: white;
             text-decoration: none;
-            cursor: pointer;
+            transition: 0.3s;
             text-align: center;
-            white-space: normal;
-            word-wrap: break-word;
-            transition: transform 0.2s, background-color 0.3s;
         }
 
         .menu-box:hover {
@@ -103,19 +92,17 @@
 
         #box_GS {
             display: block;
-            padding: 20px 20px;
+            padding: 20px;
             background-color: #71b571;
             color: black;
             border: 3px solid transparent;
             border-radius: 15px;
             text-decoration: none;
-            font-size: 26px;
-            cursor: pointer;
+            font-size: 28px;
             margin: 40px auto;
             text-align: center;
             width: 200px;
-            transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            transition: 0.3s ease;
         }
 
         #box_GS:hover {
@@ -127,126 +114,58 @@
         footer {
             background-color: #222;
             color: #eee;
-            padding: 30px 20px;
+            padding: 25px;
             text-align: center;
-            font-size: 16px;
+            font-size: 18px;
+            margin-top: auto;
         }
 
         .updatedheader img {
             height: 30px;
             width: 100px;
         }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-                margin-top: 10px;
-            }
-
-            .language-switch {
-                border-left: none;
-                padding-left: 0;
-                margin-left: 0;
-                margin-top: 10px;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="updatedheader">
-            <a href="https://links-seg2900.github.io/html-pages/Homepage.html" id="headerLink">
-             <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
-            </a>
-        </div>
-        <nav>
-            <a href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
-            <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
-            <a href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
-            <div class="language-switch">
-                <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <br><br>
-
+<header>
+    <div class="updatedheader">
         <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
-            <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png"
-                 alt="Links logo"
-                 style="display:block; margin:auto; width:700px; height:300px;">
+            <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
         </a>
+    </div>
 
-        <br>
-        <hr>
-        <br>
+    <nav>
+        <a href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
+        <a href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
+        <a href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
+        <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
+    </nav>
+</header>
 
-        <div class="box-container">
-            <a href="https://links-seg2900.github.io/html-pages/Features_page.html" class="menu-box">Features</a>
-            <a href="https://links-seg2900.github.io/html-pages/Pricing_page_version2_.html" class="menu-box">Pricing</a>
-            <a href="https://links-seg2900.github.io/html-pages/teampage.html" class="menu-box">Meet Our Team</a>
-        </div>
+<main>
+    <br><br>
 
-        <br>
-        <a href="https://links-seg2900.github.io/html-pages/log_in_page.html" id="box_GS">Get Started</a>
-    </main>
+    <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
+        <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png"
+        style="display:block; margin:auto; width:700px; height:300px;">
+    </a>
 
-    <footer>
-        <div class="footer-bottom">
-            © Links 2025. All Rights Reserved.
-        </div>
-    </footer>
+    <hr>
 
-    <script>
-        const translations = {
-            en: {
-                features: "Features",
-                pricing: "Pricing",
-                about: "Meet Our Team",
-                box1: "Features",
-                box2: "Pricing",
-                box3: "Meet Our Team",
-                getStarted: "Get Started",
-                footerBottom: "© 2025 Links. All Rights Reserved."
-            },
-            fr: {
-                features: "Caractéristiques",
-                pricing: "Abonnements",
-                about: "À propos de nous",
-                box1: "Caractéristiques",
-                box2: "Abonnements",
-                box3: "À propos de nous",
-                getStarted: "Commencer",
-                footerBottom: "© 2025 Links. Tous droits réservés."
-            }
-        };
+    <div class="box-container">
+        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Features_page.html">Features</a>
+        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/Pricing_page_version2_.html">Pricing</a>
+        <a class="menu-box" href="https://links-seg2900.github.io/html-pages/teampage.html">Meet Our Team</a>
+    </div>
 
-        document.getElementById("fr-btn").onclick = () => translate("fr");
-        document.getElementById("en-btn").onclick = () => translate("en");
+    <a href="https://links-seg2900.github.io/html-pages/log_in_page.html" id="box_GS">Get Started</a>
+</main>
 
-        function translate(lang) {
-            const t = translations[lang];
-            document.querySelector("nav a:nth-child(1)").textContent = t.features;
-            document.querySelector("nav a:nth-child(2)").textContent = t.pricing;
-            document.querySelector("nav a:nth-child(3)").textContent = t.about;
-
-            const boxes = document.querySelectorAll(".menu-box");
-            boxes[0].textContent = t.box1;
-            boxes[1].textContent = t.box2;
-            boxes[2].textContent = t.box3;
-
-            document.getElementById("box_GS").textContent = t.getStarted;
-            document.querySelector(".footer-bottom").textContent = t.footerBottom;
-        }
-    </script>
+<footer>
+    © Links 2025. All Rights Reserved.
+</footer>
 
 </body>
 </html>
