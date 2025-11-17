@@ -29,40 +29,35 @@
             overflow-y: scroll;
         }
 
-        #navbar {
+        header {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 30px;
             display: flex;
-            width: 100%;
-            height: 55px;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            background-color: var(--dark);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-
         }
 
-        .nav-links {
-            color: var(--simplistic);
+        header .updatedheader img {
+            height: 55px;
+        }
+
+        header nav {
             display: flex;
-            justify-content: space-evenly;
-            width: 150px;
-            text-decoration: none;
-            position: relative;
-            font-size: 20px;
-            border: 2px solid var(--simplistic);
-            padding: 3px 8px;
-            margin: 10px;
-            border-radius: 10px;
+            gap: 25px;
+            align-items: center;
         }
 
-        .nav-links:hover {
-            background-color: var(--simplistic);
-            color: var(--dark);
-            cursor: pointer;
-            border: 2px solid var(--dark);
-            padding: 10px;
+        header nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            transition: 0.3s ease;
+            font-size: 22px;
+        }
+
+        header nav a:hover {
+            color: #007BFF;
         }
 
         #user-page {
@@ -173,13 +168,21 @@
 
 <body>
     <!--Header-->
-    <nav id="navbar">
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/Homepage.html" id="home">Home</a>
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/User_Page.html" id="user">User</a>
-            <a class="nav-links" href ="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html" id="price">Pricing</a>
-            <a class="nav-links" href="https://links-seg2900.github.io/html-pages/teampage.html" id="about">About</a>
-            <button id="translate">French</button>
+    <header>
+        <div class="updatedheader">
+            <a href="https://links-seg2900.github.io/html-pages/Homepage.html">
+                <img src="https://raw.githubusercontent.com/Links-SEG2900/Links-SEG2900.github.io/refs/heads/main/html-pages/images/logoLinksk.png">
+            </a>
+        </div>
+
+        <nav>
+            <a id="nav-home" href="https://links-seg2900.github.io/html-pages/Homepage.html">Home</a>
+            <a id="nav-user" href="https://links-seg2900.github.io/html-pages/User_Page.html">User</a>
+            <a id="nav-price" href="https://links-seg2900.github.io/html-pages/Pricing_page._version2_.html">Pricing</a>
+            <a id="nav-about" href="https://links-seg2900.github.io/html-pages/teampage.html">About</a>
+            <a href="#" id="fr-btn">FR</a> | <a href="#" id="en-btn">EN</a>
         </nav>
+    </header>
     <!--User page section-->
     <section id="user-page">
         <!--Each user-->
@@ -218,80 +221,49 @@
     </section>
 
     <footer>
-        <div class="footer-links">
-            <a href="#">Politique et confidentialité</a>
-            <a href="#">Contactez-nous</a>
-            <a href="#">Conditions générales</a>
-        </div>
         <div class="footer-bottom">
-            &copy; 2025 MonSite. Tous droits réservés.
+            &copy; 2025 Links. All Rights Reserved.
         </div>
     </footer>
 
 
 </body>
-  <script>
-    //Translate Button
-    const transl = document.getElementById("translate");
-
-    //Navlink button
-    const user_nav = document.getElementById("user");
-    const all_user = document.querySelectorAll(".user")
-    const price = document.getElementById("price");
-    const about = document.getElementById("about");
-
-    //Stylling translate button
-    transl.style.backgroundColor = "black";
-    transl.style.color = "white";
-    transl.style.padding = "5px 10px";
-    transl.style.border = "2px solid white";
-    transl.style.borderRadius = "10px";
-
-
-
-    //Translation button function
-    transl.addEventListener("click", () => {
-        const cur = transl.textContent.trim().toLowerCase();
-        transl.textContent = cur.includes('english') ? 'French' : 'English';
-        if (transl.textContent == "English") {
-            user_nav.textContent = "Utillisateur";
-            price.textContent = "Prix";
-            about.textContent = "A propos";
-            title.textContent = "Tes Links";
-            title.style.fontStyle = "italic";
+<script>
+    const translations = {
+        en: {
+            home: "Home",
+            user: "User",
+            price: "Pricing",
+            about: "About",
+            footerBottom: "© 2025 Links. All Rights Reserved."
+        },
+        fr: {
+            home: "Accueil",
+            user: "Utilisateur",
+            price: "Prix",
+            about: "À propos",
+            footerBottom: "© 2025 Links. Tous droits réservés."
         }
-        else {
-            user_nav.textContent = "User";
-            price.textContent = "Price";
-            about.textContent = "About";
-            title.textContent = "Your Links";
-        }
+    };
 
+    document.getElementById("fr-btn").onclick = () => translate("fr");
+    document.getElementById("en-btn").onclick = () => translate("en");
 
-    });
-    //Hover
-    transl.addEventListener("mouseenter", () => {
-        transl.style.backgroundColor = "white";
-        transl.style.color = "black";
-        transl.style.cursor = "pointer";
-        transl.style.border = "2px solid white";
-        transl.style.padding = "16px";
-    });
-    transl.addEventListener("mouseleave", () => {
-        transl.style.backgroundColor = "black";
-        transl.style.color = "white";
-        transl.style.border = "2px solid white";
-        transl.style.padding = "7px 10px";
-    });
+    function translate(lang) {
+        const t = translations[lang];
+        document.getElementById("nav-home").textContent = t.home;
+        document.getElementById("nav-user").textContent = t.user;
+        document.getElementById("nav-price").textContent = t.price;
+        document.getElementById("nav-about").textContent = t.about;
+        document.querySelector(".footer-bottom").textContent = t.footerBottom;
+    }
 
-    all_user.forEach(user => {
+    document.querySelectorAll(".user").forEach(user => {
         user.addEventListener("click", () => {
-            //<a href="./project_chat_page.html"></a>
             window.location.href = "https://links-seg2900.github.io/html-pages/Chat_Page.html";
-            
-
         });
     });
 </script>
+    
 
 </html>
