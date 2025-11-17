@@ -9,50 +9,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+         *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
         }
-
-        
+    
         body {
-            font-family: "Sedgwick Ave Display", cursive;
-            font-weight: 400;
-            font-style: normal;
-            background-color: #C1E1C1;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+      font-family: "Sedgwick Ave Display", cursive;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #C1E1C1; 
+      color: black; 
         }
 
         header {
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #ddd;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #c1e1c1;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
         }
 
+        .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      }
+        
         nav {
-            display: flex;
-            gap: 25px;
-            align-items: center;
+      display: flex;
+      gap: 25px;
+      align-items: center;
         }
 
         nav a {
-            text-decoration: none;
-            color: black;
-            font-weight: 500;
-            transition: 0.3s ease;
-            font-size: 22px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #007BFF;
-        }
+      color: #007BFF;
+    }
+
+    .language-switch {
+      border-left: 1px solid #ccc;
+      padding-left: 20px;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .language-switch a {
+      margin: 0 5px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .language-switch a:hover {
+      color: #000;
+    }
+
+     footer {
+      background-color: #222;
+      color: #eee;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-links {
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .language-switch {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .footer-links a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
 
         hr {
             border: none;
@@ -111,35 +184,6 @@
             border-color: gold;
         }
 
-        footer {
-          background-color: #222;
-          color: #eee;
-          padding: 30px 20px;
-          text-align: center;
-          font-family: Arial, sans-serif;
-        }
-    
-        .footer-links {
-          margin-bottom: 15px;
-        }
-    
-        .footer-links a {
-          color: #bbb;
-          text-decoration: none;
-          margin: 0 15px;
-          font-size: 14px;
-        }
-    
-        .footer-links a:hover {
-          color: #fff;
-          text-decoration: underline;
-        }
-    
-        .footer-bottom {
-          font-size: 13px;
-          color: #888;
-        }
-
 
         .updatedheader img {
             height: 30px;
@@ -184,8 +228,10 @@
             <a href="https://links-seg2900.github.io/html-pages/log_in_page.html" id="box_GS">Get Started</a>
         </main>
         
-        <footer id="footer-text">
-            © Links 2025. All Rights Reserved.
+        <footer>
+        <div class="footer-bottom", id="footertext">
+        &copy; Links 2025. All Rights Reserved.
+        </div>
         </footer>
         <script>
             const translations = {
